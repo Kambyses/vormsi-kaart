@@ -1,0 +1,19 @@
+/**
+ * @author jevgeni dot virves at regio dot ee
+ * @since 2019-07-03
+ */
+
+
+@media only screen and (max-width: 1000px) {
+
+  body .regio-sidepanel {
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  body .regio-sidepanel-visible + .regio-main {
+    left: 0;
+    overflow: auto;
+  }
+
+}

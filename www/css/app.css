@@ -1,0 +1,434 @@
+/**
+ * @author jevgeni dot virves at regio dot ee
+ * @since 2019-07-03
+ */
+
+
+/**
+ * regio-header
+ */
+.regio-header {
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 55px;
+  margin: 0;
+  padding: 0;
+  background: #2b1c0e;
+  z-index: 5;
+}
+
+.regio-header h1 {
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 60px;
+  margin: -10px 0 0 0;
+  padding: 0;
+  font-size: 20px;
+  line-height: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+
+
+/**
+ * regio-sidepanel
+ */
+.regio-sidepanel {
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  top: 55px;
+  left: 0;
+  bottom: 0;
+  width: 300px;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  border-right: 2px solid #2b1c0e;
+  overflow: auto;
+  transform: translate(-100%, 0px);
+  transition: transform 0.2s ease-out 0s;
+  z-index: 4;
+}
+
+.regio-sidepanel-visible {
+  transform: translate(0px, 0px);
+  overflow: auto;
+}
+
+
+
+/**
+ * regio-sidepanel-toggle
+ */
+.regio-sidepanel-toggle {
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 45px;
+  height: 45px;
+  margin: 0;
+  padding: 7px 7px 0 7px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.regio-sidepanel-toggle i {
+  display: block;
+  position: relative;
+  height: 4px;
+  margin: 0 0 7px 0;
+  background: #fff;
+  transform: translate(0px, 0px) rotate(0deg) scale(1);
+}
+
+.regio-sidepanel-toggle i:nth-child(1) {
+  transition: transform 0.2s ease-in 0.2s;
+}
+
+.regio-sidepanel-toggle i:nth-child(2) {
+  transition: transform 0.2s ease-in 0.3s;
+}
+
+.regio-sidepanel-toggle i:nth-child(3) {
+  transition: transform 0.2s ease-in 0.4s;
+}
+
+.regio-sidepanel-visible.regio-sidepanel-toggle i:nth-child(1) {
+  transform: translate(0px, 11px) rotate(405deg) scale(1);
+}
+
+.regio-sidepanel-visible.regio-sidepanel-toggle i:nth-child(2) {
+  transform: translate(0px, 0px) rotate(360deg) scale(0); 
+}
+
+.regio-sidepanel-visible.regio-sidepanel-toggle i:nth-child(3) {
+  transform: translate(0px, -11px) rotate(-405deg) scale(1);
+}
+
+
+
+
+
+
+/**
+ * regio-logo
+ */
+.regio-logo {
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+  bottom: 5px;
+  left: 50%;
+  margin: 0 0 0 -12px;
+  cursor: pointer;
+  opacity: 0.85;
+}
+
+.regio-logo:hover {
+  opacity: 1;
+}
+
+.regio-logo img {
+  width: 24px;
+  height: 24px;
+}
+
+
+
+
+
+/**
+ * regio-main
+ */
+.regio-main {
+  display: block;
+  position: absolute;
+  top: 55px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  transition: left 0.2s ease-out 0s;
+}
+
+.regio-sidepanel-visible + .regio-main {
+  left: 300px;
+}
+
+
+
+
+/**
+ * regio-map
+ */
+.regio-map {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+
+/**
+ * regio-messages
+ */
+ .regio-messages {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  width: 400px;
+  height: 0px;
+  margin: 0 0 0 -150px;
+  padding: 0;
+  transition: height 0.2s linear 0s;
+  z-index: 5;
+}
+
+.regio-message {
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 10px;
+  background: #fff;
+  box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 5px 2px;
+  transform: translate(0px, -100px);
+  transition: transform 0.2s linear 0s;
+}
+
+.regio-message::before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.regio-message-info::before,
+.regio-message-message::before,
+.regio-message-notify::before {
+  background: rgba(87, 119, 192, 0.4);
+}
+
+.regio-message-success::before {
+  background: rgba(132, 229, 51, 0.4);
+}
+
+.regio-message-warning::before {
+  background: rgba(255, 116, 0, 0.4);
+}
+
+.regio-message-error::before {
+  background: rgba(198, 0, 0, 0.4)
+}
+
+.regio-message-text {
+  display: block;
+  position: relative;
+  padding: 0 25px 0 50px;
+}
+
+.regio-message-text::before {
+  display: block;
+  content: "\f05a";
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  width: 32px;
+  height: 32px;
+  margin: -16px 0 0 0;
+  line-height: 32px;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 32px;
+  text-align: center;
+  text-shadow: rgba(255, 255, 255, 0.9) 0px 0px 5px;
+}
+
+.regio-message-info .regio-message-text::before,
+.regio-message-message .regio-message-text::before,
+.regio-message-notify .regio-message-text::before {
+  content: "\f05a";
+  color: rgba(87, 119, 192, 1);
+}
+
+.regio-message-success .regio-message-text::before {
+  content: "\f058";
+  color: rgba(132, 229, 51, 1);
+}
+
+.regio-message-warning .regio-message-text::before {
+  content: "\f0f3";
+  color: rgba(255, 116, 0, 1);
+}
+
+.regio-message-error .regio-message-text::before {
+  content: "\f071";
+  color: rgba(198, 0, 0, 1);
+}
+
+.regio-message-dismiss {
+  display: block;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 20px;
+  height: 20px;
+  border: none;
+  background: none;
+  line-height: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+
+
+/**
+ * regio-layerswitcher
+ */
+ .regio-layerswitcher {
+  display: block;
+  box-sizing: border-box;
+  position: relative;
+  clear: both;
+  margin: 0;
+  padding: 20px 0 0 0;
+  list-style: none;
+}
+
+.regio-layerswitcher label {
+  display: block;
+  clear: both;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.regio-layerswitcher input {
+  display: none;
+}
+
+.regio-layerswitcher span {
+  display: block;
+  clear: both;
+  position: relative;
+  margin: 0;
+  padding: 10px 0 10px 55px;
+  font-size: 12px;
+  line-height: 12px;
+  color: #2b1c0e;
+  text-transform: uppercase;
+}
+
+.regio-layerswitcher input + span::before,
+.regio-layerswitcher input + span::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 25px;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  margin: -10px 0 0 0;
+}
+
+.regio-layerswitcher input + span::before {
+  display: block;
+  border: solid 2px #2b1c0e;
+}
+
+.regio-layerswitcher input[type="checkbox"] + span::after {
+  content: "\f00c";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 14px;
+  text-align: center;
+}
+
+.regio-layerswitcher input[type="radio"] + span::before {
+  border-radius: 10px;
+}
+
+.regio-layerswitcher input[type="radio"] + span::after {
+  width: 10px;
+  height: 10px;
+  margin: -5px 0 0 5px;
+  background: #2b1c0e;
+  border-radius: 5px;
+}
+
+.regio-layerswitcher input + span::after {
+  display: none;
+}
+
+.regio-layerswitcher input:checked + span::after {
+  display: block;
+}
+
+.regio-layerswitcher label:hover span,
+.regio-layerswitcher label:focus span,
+.regio-layerswitcher label:active span {
+  color: #2b1c0e;
+}
+
+.regio-layerswitcher label:hover input + span::before,
+.regio-layerswitcher label:focus input + span::before,
+.regio-layerswitcher label:active input + span::before {
+  border-color: #2b1c0e;
+}
+
+.regio-layerswitcher label:hover input[type="radio"] + span::after,
+.regio-layerswitcher label:focus input[type="radio"] + span::after,
+.regio-layerswitcher label:active input[type="radio"] + span::after {
+  background: #2b1c0e;
+}
+
+.regio-layerswitcher label input:checked + span {
+  color: #2b1c0e;
+}
+
+.regio-layerswitcher label input:checked + span::before {
+  border-color: #2b1c0e;
+}
+
+.regio-layerswitcher label input[type="radio"]:checked + span::after {
+  background: #2b1c0e;
+}
+
+
+
+.regio-popup-content {
+  font-family: "Lucida Sans", Arial, sans-serif;
+  font-size: 14px;
+}
+
+.regio-popup-title {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
+
+.regio-popup-description {
+  margin: 0;
+  padding: 0;
+}

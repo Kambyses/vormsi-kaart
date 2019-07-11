@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="104.35791"
+   height="120.44962"
+   viewBox="0 0 27.611019 31.868561"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="sadam.svg"
+   inkscape:export-filename="C:\Projects\regio-webapi\kaart.regio.ee\www\vormsi\www\img\vaatetorn.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
+  <defs
+     id="defs2">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath149212">
+      <path
+         d="M 0,0 H 1190.551 V 841.89 H 0 Z"
+         id="path149210"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath149228">
+      <path
+         d="M 0,0 H 1190.551 V 841.89 H 0 Z"
+         id="path149226"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.8284271"
+     inkscape:cx="88.799655"
+     inkscape:cy="71.563307"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer3"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:snap-page="false"
+     units="px"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:pagecheckerboard="true"
+     inkscape:snap-to-guides="false"
+     inkscape:snap-grids="false"
+     scale-x="0.26458"
+     inkscape:snap-global="false" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(118.50971,52.612639)"
+     style="display:inline" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="vaatetorn"
+     style="display:inline"
+     transform="translate(107.55057,46.959077)">
+    <g
+       id="g155300"
+       transform="matrix(3.0457914,0,0,-3.0457914,-93.553936,-44.694695)">
+      <path
+         d="M 0,0 0.3,-0.03 0.57,-0.21 0.78,-0.509 0.84,-0.87 0.81,-1.23 0.66,-1.56 0.39,-1.74 0.09,-1.8 v -0.03 h -0.3 v 0.03 l -0.3,0.06 -0.27,0.18 -0.15,0.33 -0.03,0.36 0.06,0.361 0.21,0.299 0.27,0.18 0.3,0.03 h 0.03 L 0,0.51 h -0.21 l -0.48,-0.06 -0.42,-0.27 -0.27,-0.45 -0.15,-0.57 0.06,-0.54 0.27,-0.479 0.36,-0.301 0.48,-0.09 v -0.63 h -1.23 v -0.51 h 1.23 v -5.64 l -0.45,0.151 -0.42,0.149 -0.42,0.24 -0.39,0.24 -0.36,0.3 -0.33,0.36 -0.3,0.36 -0.24,0.39 H -3.3 l 0.66,0.39 v 0.03 l -1.74,0.72 0.03,-1.8 0.69,0.42 0.27,-0.449 0.3,-0.451 0.39,-0.39 0.39,-0.33 0.45,-0.3 0.48,-0.239 0.51,-0.151 0.51,-0.119 h 0.6 l 0.51,0.119 0.51,0.151 0.48,0.239 0.45,0.3 0.39,0.33 0.39,0.39 0.3,0.451 0.27,0.449 0.72,-0.42 v 1.8 L 2.55,-6.42 V -6.45 L 3.18,-6.84 2.94,-7.23 2.64,-7.59 2.31,-7.95 1.95,-8.25 1.56,-8.49 1.14,-8.73 0.72,-8.879 0.27,-9.03 H 0.24 v 5.64 H 1.5 v 0.51 H 0.24 v 0.63 l 0.48,0.09 0.36,0.301 0.27,0.479 0.06,0.54 L 1.26,-0.27 0.99,0.18 0.57,0.45 0.09,0.51 Z"
+         style="fill:#1d1d1b;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="path155302"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       id="g155304"
+       transform="matrix(3.0457914,0,0,-3.0457914,-94.193851,-46.24896)">
+      <path
+         d="m 0,0 -0.48,-0.06 -0.42,-0.27 -0.27,-0.45 -0.15,-0.57 0.06,-0.54 0.27,-0.48 0.36,-0.3 0.48,-0.09 V -3.39 H -1.38 V -3.9 h 1.23 v -5.64 l -0.87,0.3 -0.42,0.24 -0.39,0.24 -0.36,0.3 -0.33,0.36 -0.3,0.36 -0.24,0.39 h -0.03 l 0.66,0.39 v 0.03 l -1.74,0.72 0.03,-1.8 0.69,0.42 0.27,-0.45 0.3,-0.45 0.39,-0.39 0.39,-0.33 0.45,-0.3 0.48,-0.24 0.51,-0.15 0.51,-0.12 h 0.6 l 0.51,0.12 0.51,0.15 0.48,0.24 0.45,0.3 0.39,0.33 0.39,0.39 0.3,0.45 0.27,0.45 0.72,-0.42 v 1.8 L 2.76,-6.93 V -6.96 L 3.39,-7.35 3.15,-7.74 2.85,-8.1 2.52,-8.46 2.16,-8.76 1.77,-9 1.35,-9.24 0.48,-9.54 H 0.45 v 5.64 h 1.26 v 0.51 H 0.45 v 0.63 l 0.48,0.09 0.36,0.3 0.27,0.48 0.06,0.54 L 1.47,-0.78 1.2,-0.33 0.78,-0.06 0.3,0 0.21,-0.51 0.51,-0.54 0.78,-0.72 0.99,-1.02 1.05,-1.38 1.02,-1.74 0.87,-2.07 0.6,-2.25 0.3,-2.31 V -2.34 H 0 v 0.03 l -0.3,0.06 -0.27,0.18 -0.15,0.33 -0.03,0.36 0.06,0.36 0.21,0.3 0.27,0.18 0.33,0.03 L 0.21,0 H 0"
+         style="fill:none;stroke:#1d1d1b;stroke-width:0.41999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1"
+         id="path155306"
+         inkscape:connector-curvature="0" />
+    </g>
+  </g>
+</svg>

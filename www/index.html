@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="et">
+  <head>
+    <meta charset="utf-8">
+    <title>Vormsi kaart</title>
+    <meta name="keywords" content="vormsi">
+    <meta name="description" content="Vormsi kaart">
+    <meta property="og:title"       content="Vormsi kaart">
+    <meta property="og:site_name"   content="Vormsi kaart">
+    <meta property="og:description" content="Vormsi kaart">
+    <meta property="og:image"       content="img/favicon.png">
+    <meta property="og:url"         content="https://kaart.regio.ee/vormsi/">
+    <link type="image/x-icon" rel="shortcut icon" href="https://kaart.regio.ee/img/favicon.ico">
+    <meta name="theme-color" content="#2b1c0e">
+    <meta name="msapplication-TileColor" content="#2b1c0e">
+    <meta name="msapplication-TileImage" content="https://kaart.regio.ee/img/regio-logo.png">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#2b1c0e">
+    <meta name="author" content="jevgeni dot virves at regio dot ee">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="manifest" href="manifest.json?version=2019-07-03">
+    <style>
+      html {
+        width: 100%;
+        height: 100%;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        font-family: "Lucida Sans", Arial, sans-serif;
+        font-size: 14px;
+        line-height: 14px;
+        overflow: hidden;
+      }
+
+      .regio-spinner {
+        display: block;
+        position: fixed;
+        box-sizing: border-box;
+        top: 50%;
+        left: 50%;
+        width: 32px;
+        height: 32px;
+        margin: -16px 0 0 -16px;
+        border: solid 4px #f04e23;
+        border-top-color: transparent;
+        border-radius: 16px;
+        opacity: 1;
+        animation: regio-spinner-spin 1s cubic-bezier(0.75, 0.25, 0.25, 0.75) infinite;
+        z-index: 1001;
+        pointer-events: none;
+        transition: opacity 0.2s linear 0s;
+      }
+
+      .regio-spinner-hidden {
+        opacity: 0;
+      }
+
+      @keyframes regio-spinner-spin { 
+        from { 
+          transform: rotate(0deg); 
+        }
+        to { 
+          transform: rotate(360deg); 
+        }
+      }
+
+      .regio-app-loading .regio-main,
+      .regio-app-loading .regio-header,
+      .regio-app-loading .regio-messages,
+      .regio-app-loading .regio-sidepanel {
+        visibility: hidden;
+      }
+
+      body:not(.regio-app-loading) .regio-sidepanel-visible ~ .regio-spinner {
+        margin-left: 134px;
+      }
+
+    </style>
+  </head>
+
+  <body class="regio-app-loading">
+
+    <div class="regio-header">
+      <h1>Vormsi kaart</h1>
+      <button type="button" class="regio-sidepanel-toggle regio-sidepanel-visible" title="Näita/peida külgpaneel"><i></i><i></i><i></i></button>
+    </div>
+
+    <div class="regio-sidepanel regio-sidepanel-visible">
+
+      <ul class="regio-layerswitcher">
+        <li>
+          <label>
+            <input type="checkbox" name="{inputname}" value="{inputvalue}">
+            <span>{layername}</span>
+          </label>
+        </li>
+      </ul>
+
+      <a href="http://www.regio.ee" title="Kaardirakenduse arendas &#10;Regio - kaardid ja geoinfoüsteemid" class="regio-logo">
+        <img src="https://kaart.regio.ee/img/regio-logo-black-32x32.png" alt="Kaardirakenduse arendas &#10;Regio - kaardid ja geoinfoüsteemid">
+      </a>
+
+    </div>
+
+    <div class="regio-main">
+      <div class="regio-map"></div>
+    </div>
+
+    <div class="regio-messages">
+      <p class="regio-message">
+        <span class="regio-message-text"></span>
+        <button class="regio-message-dismiss"><i class="fa fa-times"></i></button>
+      </p>
+    </div>
+    
+    <div class="regio-spinner regio-spinner-visible"></div>
+  
+    <script>
+      setTimeout(function () {
+        "use strict";
+        var regio = window.regio = window.regio || {}, script;
+        regio.environment = window.location.hostname !== "kaart.regio.ee" ? "development" : "production";
+        regio.version = regio.environment === "production" ? "2019-07-11-08-59" : "";
+        regio.versionArgs = regio.version ? "?version=" + regio.version : "";
+        script = document.createElement("script");
+        script.setAttribute("src", "https://kaart.regio.ee/vendors/requirejs/2.3.6/require.min.js");
+        script.setAttribute("data-main", "js/app.js" + window.regio.versionArgs);
+        document.head.appendChild(script);
+      }, 20);
+    </script>
+    <noscript>Javascript required</noscript>
+
+  </body>
+</html>

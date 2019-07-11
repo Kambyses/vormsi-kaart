@@ -1,0 +1,1507 @@
+{
+  "type": "FeatureCollection",
+  "features":
+  [
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Metssiga",
+        "description":  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "category":     "Loodus",
+        "style":        "metssiga",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.308385512925327, 58.997460863838796]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Metssiga",
+        "category":     "Loodus",
+        "style":        "metssiga",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.317060586059654, 58.99576594117556]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Põder",
+        "category":     "Loodus",
+        "style":        "poder",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.306590670207072, 59.00423972019277]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Kotkas",
+        "category":     "Loodus",
+        "style":        "kotkas",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.279069748565718, 59.03534370611425]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Orav",
+        "category":     "Loodus",
+        "style":        "orav",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.16659293830395, 59.01963709840149]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Kajakad",
+        "category":     "Loodus",
+        "style":        "kajakad",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.088517280136102, 59.042115102087195]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Luik",
+        "category":     "Loodus",
+        "style":        "luik",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.11185023543206, 59.013939335787626]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Ilves",
+        "category":     "Loodus",
+        "style":        "ilves",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.25536, 59.01117]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Kuused",
+        "category":     "Loodus",
+        "style":        "kuused",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.16369, 59.01008]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Luik",
+        "category":     "Loodus",
+        "style":        "luik",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.26821, 59.03164]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Kiivitaja",
+        "category":     "Loodus",
+        "style":        "kiivitaja",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.23068, 58.98199]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Kurg",
+        "category":     "Loodus",
+        "style":        "kurg",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.374794693454305, 58.99114300073998]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Pardid",
+        "category":     "Loodus",
+        "style":        "pardid",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.363427356231057, 58.95213151009085]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Pardid",
+        "category":     "Loodus",
+        "style":        "part",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.23380, 58.97427]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Pardid",
+        "category":     "Loodus",
+        "style":        "part_ujub",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.22669, 58.96191]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Pardid",
+        "category":     "Loodus",
+        "style":        "part_vaike",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.1165, 59.00938]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Part",
+        "category":     "Loodus",
+        "style":        "part_vaike",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.257452263332937, 59.03456718524296]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Part",
+        "category":     "Loodus",
+        "style":        "part_vaike",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.16486, 58.97979]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Part",
+        "category":     "Loodus",
+        "style":        "part_vaike",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.17377, 58.95596]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Part",
+        "category":     "Loodus",
+        "style":        "part_vaike",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.21835, 58.96980]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Part",
+        "category":     "Loodus",
+        "style":        "part_vaike",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.26326, 58.96659]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Part",
+        "category":     "Loodus",
+        "style":        "part_vaike",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.28204, 58.95623]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Part",
+        "category":     "Loodus",
+        "style":        "part_vaike",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.29973, 58.95855]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Part",
+        "category":     "Loodus",
+        "style":        "part_vaike",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.29001, 58.97023]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Part",
+        "category":     "Loodus",
+        "style":        "part_vaike",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.35321, 59.02345]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Part",
+        "category":     "Loodus",
+        "style":        "part_vaike",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.32521, 59.03776]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Part",
+        "category":     "Loodus",
+        "style":        "part_vaike",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.29478, 59.03398]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Part",
+        "category":     "Loodus",
+        "style":        "part_vaike",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.19773, 59.04526]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Part",
+        "category":     "Loodus",
+        "style":        "part_vaike",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.18585, 59.05210]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Part",
+        "category":     "Loodus",
+        "style":        "part_vaike",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.12604, 59.03894]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Luik",
+        "category":     "Loodus",
+        "style":        "luik2",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.262317883210784, 58.95259435566476]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Lehtpuud",
+        "category":     "Loodus",
+        "style":        "lehtpuud",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.133040826735396, 59.00868339849558]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Kadakad",
+        "category":     "Loodus",
+        "style":        "kadakad",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.318019125020527, 58.981579611317926]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Kadakad",
+        "category":     "Loodus",
+        "style":        "kadakad2",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.18594, 58.97282]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Saxby puisniit",
+        "category":     "Loodus",
+        "style":        "puisniit",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.13211, 59.02658]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Sviby rannaniit",
+        "category":     "Loodus",
+        "style":        "puisniit",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.29733, 58.97547]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Norrby puisniit",
+        "category":     "Loodus",
+        "style":        "puisniit",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.34427, 59.01761]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Mõisa varemed",
+        "category":     "Mõisa varemed",
+        "style":        "moisa_varemed",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.19742, 58.99214]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Majakas",
+        "category":     "Majakad",
+        "style":        "majakas",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.118027785992155, 59.02755467496971]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Piirivalvetorn",
+        "category":     "piirivalvetorn",
+        "style":        "piirivalvetorn",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.11982232164624, 59.011066528009735]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Piirivalvetorn",
+        "category":     "piirivalvetorn",
+        "style":        "piirivalvetorn",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.33194, 59.04088]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Piirivalvetorn",
+        "category":     "piirivalvetorn",
+        "style":        "piirivalvetorn",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.29888, 59.03355]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Ilus vaade 1",
+        "category":     "Ilus vaade",
+        "style":        "ilus_vaade",
+        "visible":      true,
+        "icon-anchor":  "right",
+        "icon-rotate":  350
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.189947464579177, 59.0510687451999]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Ilus vaade 2",
+        "category":     "Ilus vaade",
+        "style":        "ilus_vaade",
+        "visible":      true,
+        "icon-anchor":  "right",
+        "icon-rotate":  340
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.358720884217234, 59.01968152801666]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Ilus vaade 3",
+        "category":     "Ilus vaade",
+        "style":        "ilus_vaade",
+        "visible":      true,
+        "icon-anchor":  "right",
+        "icon-rotate":  350
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.279936581278008, 59.02348623247042]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Ilus vaade 4",
+        "category":     "Ilus vaade",
+        "style":        "ilus_vaade",
+        "visible":      true,
+        "icon-anchor":  "left",
+        "icon-rotate":  180
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.117113193867368, 59.02787726386023]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Ilus vaade 5",
+        "category":     "Ilus vaade",
+        "style":        "ilus_vaade",
+        "visible":      true,
+        "icon-anchor":  "right",
+        "icon-rotate":  40
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.375031141701783, 58.97423026874202]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Ilus vaade 6",
+        "category":     "Ilus vaade",
+        "style":        "ilus_vaade",
+        "visible":      true,
+        "icon-anchor":  "right",
+        "icon-rotate":  5
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.311302914164344, 58.955525504948724]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Ilus vaade 7",
+        "category":     "Ilus vaade",
+        "style":        "ilus_vaade",
+        "visible":      true,
+        "icon-anchor":  "right",
+        "icon-rotate":  140
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.265114722017984, 58.968915365361624]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Ilus vaade 8",
+        "category":     "Ilus vaade",
+        "style":        "ilus_vaade",
+        "visible":      true,
+        "icon-anchor":  "right",
+        "icon-rotate":  45
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.408676299140154, 59.02883134800419]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Praam",
+        "category":     "Sadam, paadisadam",
+        "style":        "praam",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.316769070696665, 58.970561100633404]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Matkarada",
+        "category":     "Matkarada",
+        "style":        "matkarada_vasakule",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.169485316981905, 59.04767455183324]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Matkarada",
+        "category":     "Matkarada",
+        "style":        "matkarada_vasakule",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.20763600036642, 59.03537452192273]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Matkarada",
+        "category":     "Matkarada",
+        "style":        "matkarada_vasakule",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.17575, 58.98474]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Matkarada",
+        "category":     "Matkarada",
+        "style":        "matkarada_paremale",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.316084753965328, 59.02365391545297]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Matkarada",
+        "category":     "Matkarada",
+        "style":        "matkarada_paremale",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.13637, 59.00709]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Matkarada",
+        "category":     "Matkarada",
+        "style":        "matkarada_paremale",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.27647, 58.96554]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Matkarada",
+        "category":     "Matkarada",
+        "style":        "matkarada_paremale",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.37230, 58.97818]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Matkarada",
+        "category":     "Matkarada",
+        "style":        "matkarada_paremale",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.22612, 59.00448]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Jalgrattur",
+        "category":     "Jalgratturid",
+        "style":        "jalgrattur",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.171977466453853, 58.986673568353865]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Rattalaenutus",
+        "category":     "Rattalaenutus",
+        "style":        "rattalaenutus",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.27336, 58.97039]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Rattalaenutus",
+        "category":     "Rattalaenutus",
+        "style":        "rattalaenutus",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.31031, 58.97391]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Telkimiskoht",
+        "category":     "Telkimiskoht",
+        "style":        "telkimiskoht",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.27104, 58.96823]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Telkimiskoht",
+        "category":     "Telkimiskoht",
+        "style":        "telkimiskoht",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.27858, 59.02374]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Telkimiskoht",
+        "category":     "Telkimiskoht",
+        "style":        "telkimiskoht",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.21237, 59.03620]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Vaatetorn",
+        "category":     "Vaatetorn",
+        "style":        "vaatetorn",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.26542, 58.96923]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Vaatetorn",
+        "category":     "Vaatetorn",
+        "style":        "vaatetorn",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.28741, 58.95677]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Vaatetorn",
+        "category":     "Vaatetorn",
+        "style":        "vaatetorn",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.30458, 58.95683]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Vaatetorn",
+        "category":     "Vaatetorn",
+        "style":        "vaatetorn",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.38363, 58.98868]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Tuletorn",
+        "category":     "Tuletorn, meremärk",
+        "style":        "tuletorn",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.35093, 59.01994]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Wifi",
+        "category":     "Wifi",
+        "style":        "wifi",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.30736, 59.02067]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Wifi",
+        "category":     "Wifi",
+        "style":        "wifi",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.26392, 58.97036]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Wifi",
+        "category":     "Wifi",
+        "style":        "wifi",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.35235, 59.00350]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Wifi",
+        "category":     "Wifi",
+        "style":        "wifi",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.28263, 59.01373]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Wifi",
+        "category":     "Wifi",
+        "style":        "wifi",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.19612, 58.99084]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Wifi",
+        "category":     "Wifi",
+        "style":        "wifi",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.31525, 58.97412]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Wifi",
+        "category":     "Wifi",
+        "style":        "wifi",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.34710, 59.01668]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Wifi",
+        "category":     "Wifi",
+        "style":        "wifi",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.17052, 59.03000]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Wifi",
+        "category":     "Wifi",
+        "style":        "wifi",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.22086, 59.02673]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Wifi",
+        "category":     "Wifi",
+        "style":        "wifi",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.24096, 58.99152]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Wifi",
+        "category":     "Wifi",
+        "style":        "wifi",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.25089, 58.98879]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Paadisadam",
+        "category":     "Sadam, paadisadam",
+        "style":        "paadisadam",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.25930, 58.96934]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Sviby sadam",
+        "category":     "Sadam, paadisadam",
+        "style":        "sadam",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.30901, 58.96990]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Paadisadam",
+        "category":     "Sadam, paadisadam",
+        "style":        "paadisadam",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.36181, 59.02256]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Paadisadam",
+        "category":     "Sadam, paadisadam",
+        "style":        "paadisadam",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.27443, 59.02504]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Majutus",
+        "category":     "Majutus ja söök",
+        "style":        "majutus",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.30427, 59.01905]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Majutus",
+        "category":     "Majutus ja söök",
+        "style":        "majutus",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.26580, 58.97129]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Majutus",
+        "category":     "Majutus ja söök",
+        "style":        "majutus",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.26455, 58.97386]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Majutus",
+        "category":     "Majutus ja söök",
+        "style":        "majutus",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.34623, 59.00246]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Majutus",
+        "category":     "Majutus ja söök",
+        "style":        "majutus",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.27808, 59.02245]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Majutus",
+        "category":     "Majutus ja söök",
+        "style":        "majutus",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.23352, 58.99716]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Majutus",
+        "category":     "Majutus ja söök",
+        "style":        "majutus",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.23809, 58.99368]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Majutus",
+        "category":     "Majutus ja söök",
+        "style":        "majutus",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.24352, 58.99414]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Tuulik",
+        "category":     "Tuulik",
+        "style":        "tuulik",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.28127, 59.01187]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Tuulik",
+        "category":     "Tuulik",
+        "style":        "tuulik",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.20856, 58.98489]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Punane punkt",
+        "text-field":   "1",
+        "category":     "Punased punktid",
+        "style":        "punane_punkt",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.12168,59.02556]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Punane punkt",
+        "text-field":   "2",
+        "category":     "Punased punktid",
+        "style":        "punane_punkt",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.201839294463298, 58.99322856322641]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Punane punkt",
+        "text-field":   "3",
+        "category":     "Punased punktid",
+        "style":        "punane_punkt",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.221857003609728, 58.99580179121449]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Punane punkt",
+        "text-field":   "4",
+        "category":     "Punased punktid",
+        "style":        "punane_punkt",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.2329338061096, 59.00236138989811]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Punane punkt",
+        "text-field":   "5",
+        "category":     "Punased punktid",
+        "style":        "punane_punkt",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.245486542796982, 58.99860572251262]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Punane punkt",
+        "text-field":   "6",
+        "category":     "Punased punktid",
+        "style":        "punane_punkt",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.254360697676077, 58.99075257691783]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Punane punkt",
+        "text-field":   "7",
+        "category":     "Punased punktid",
+        "style":        "punane_punkt",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.2780251106812, 59.0124322812741]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Punane punkt",
+        "text-field":   "8",
+        "category":     "Punased punktid",
+        "style":        "punane_punkt",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.350838689184144, 59.01805505507156]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Punane punkt",
+        "text-field":   "8",
+        "category":     "Punased punktid",
+        "style":        "punane_punkt",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.343329788903162, 59.009972028780936]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Punane punkt",
+        "text-field":   "9",
+        "category":     "Punased punktid",
+        "style":        "punane_punkt",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.18567512921959, 59.0054444233065]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Sinine punkt",
+        "text-field":   "1",
+        "category":     "Sinised punktid",
+        "style":        "sinine_punkt",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.229985852021002, 58.998033966643504]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Sinine punkt",
+        "text-field":   "2",
+        "category":     "Sinised punktid",
+        "style":        "sinine_punkt",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.23415, 58.99416]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Sinine punkt",
+        "text-field":   "3",
+        "category":     "Sinised punktid",
+        "style":        "sinine_punkt",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.25115, 58.98792]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Sinine punkt",
+        "text-field":   "4",
+        "category":     "Sinised punktid",
+        "style":        "sinine_punkt",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.26397, 58.97608]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Sinine punkt",
+        "text-field":   "5",
+        "category":     "Sinised punktid",
+        "style":        "sinine_punkt",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.26741, 58.97302]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Sinine punkt",
+        "text-field":   "6",
+        "category":     "Sinised punktid",
+        "style":        "sinine_punkt",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.27337, 59.02296]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Sinine punkt",
+        "text-field":   "7",
+        "category":     "Sinised punktid",
+        "style":        "sinine_punkt",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.30099, 59.01811]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Sinine punkt",
+        "text-field":   "8",
+        "category":     "Sinised punktid",
+        "style":        "sinine_punkt",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.31932, 58.97319]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Sinine punkt",
+        "text-field":   "9",
+        "category":     "Sinised punktid",
+        "style":        "sinine_punkt",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.24281, 58.99594]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Sinine punkt",
+        "text-field":   "10",
+        "category":     "Sinised punktid",
+        "style":        "sinine_punkt",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.35061, 59.00234]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Muuseum",
+        "category":     "Muuseum",
+        "style":        "muuseum",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.12273, 59.02855]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Muuseum",
+        "category":     "Muuseum",
+        "style":        "muuseum",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.29836, 58.98631]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Kirik",
+        "category":     "Kirik",
+        "style":        "kirik",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.23091, 59.00091]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Monument",
+        "category":     "Monument",
+        "style":        "monument",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.30594, 58.98448]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Monument",
+        "category":     "Monument",
+        "style":        "monument",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.33401, 59.01937]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Monument",
+        "category":     "Monument",
+        "style":        "monument",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.22948, 59.00165]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Monument",
+        "category":     "Monument",
+        "style":        "monument",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.24903, 58.99026]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Meremärk",
+        "category":     "Tuletorn, meremärk",
+        "style":        "meremark",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.11741, 59.02478]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Meremärk",
+        "category":     "Tuletorn, meremärk",
+        "style":        "meremark",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.16076, 58.97057]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Meremärk",
+        "category":     "Tuletorn, meremärk",
+        "style":        "meremark",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.16783, 58.96087]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Meremärk",
+        "category":     "Tuletorn, meremärk",
+        "style":        "meremark",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.30648, 58.97434]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Kohvik",
+        "category":     "Majutus ja söök",
+        "style":        "kohvik",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.31487, 58.97266]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Kohvik",
+        "category":     "Majutus ja söök",
+        "style":        "kohvik",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.24807, 58.98864]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Kohvik",
+        "category":     "Majutus ja söök",
+        "style":        "kohvik",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.24510, 58.99274]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Ujumiskoht",
+        "category":     "Ujumiskoht",
+        "style":        "ujumiskoht",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.11649, 59.02347]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Ujumiskoht",
+        "category":     "Ujumiskoht",
+        "style":        "ujumiskoht",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.25924, 58.97174]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Ujumiskoht",
+        "category":     "Ujumiskoht",
+        "style":        "ujumiskoht",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.33251, 58.97529]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Ujumiskoht",
+        "category":     "Ujumiskoht",
+        "style":        "ujumiskoht",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.27594, 59.02780]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Ujumiskoht",
+        "category":     "Ujumiskoht",
+        "style":        "ujumiskoht",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.21392, 59.03789]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Piirivalveehitis",
+        "category":     "Piirivalveehitised",
+        "style":        "piirivalveehitis",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.12099, 59.01403]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Piirivalveehitis",
+        "category":     "Piirivalveehitised",
+        "style":        "piirivalveehitis",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.35649, 59.01977]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Piirivalveehitis",
+        "category":     "Piirivalveehitised",
+        "style":        "piirivalveehitis",
+        "visible":      true
+      },
+      "geometry":       {"type": "Point", "coordinates": [23.24724, 59.03658]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Rumpo sihtkaitsevöönd",
+        "category":     "Looduskaitsealad",
+        "style":        "looduskaitseala",
+        "visible":      true
+      },
+      "geometry":       {"type": "Polygon", "coordinates": [[
+        [23.31701, 58.95523], [23.31892, 58.94143], [23.29367, 58.93225], [23.24508, 58.94200], [23.22971, 58.95334], [23.23527, 58.96277], [23.26519, 58.96980], [23.27040, 58.96723],
+        [23.27258, 58.96762], [23.27581, 58.96607], [23.28153, 58.96866], [23.27513, 58.97309], [23.27706, 58.97477], [23.28624, 58.97463], [23.30608, 58.96354], [23.31701, 58.95523]
+      ]]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Rälby SKV",
+        "category":     "Looduskaitsealad",
+        "style":        "looduskaitseala",
+        "visible":      true
+      },
+      "geometry":       {"type":"LineString", "coordinates": [[23.27565,59.00651],[23.28439,58.99934],[23.27267,58.99399],[23.272,58.99533],[23.26009,58.9932],[23.25999,58.99454],[23.25577,58.99434],[23.25622,59.0038]]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Kärrsläti PV",
+        "category":     "Looduskaitsealad",
+        "style":        "looduskaitseala",
+        "visible":      true
+      },
+      "geometry":       {"type":"LineString", "coordinates": [[23.19598,59.04041],[23.19506,59.04002],[23.19511,59.03886],[23.19241,59.03912],[23.19096,59.03693],[23.18605,59.03512],[23.18715,59.03504],[23.18115,59.03258],[23.17188,59.04217],[23.17421,59.0418],[23.17514,59.04804]]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "Kärrsläti PV",
+        "category":     "Looduskaitsealad",
+        "style":        "looduskaitseala",
+        "visible":      true
+      },
+      "geometry":       {"type":"LineString", "coordinates": [[23.37555,58.97688],[23.37259,58.9772],[23.36599,58.97983],[23.35704,58.98383],[23.36018,58.9862],[23.35783,58.98703],[23.36765,58.99173],[23.36354,58.99223],[23.36344,58.99324],[23.35197,58.99572],[23.37355,59.00126]]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "",
+        "category":     "Looduskaitsealad",
+        "style":        "looduskaitseala",
+        "visible":      true
+      },
+      "geometry":       {"type":"LineString", "coordinates": [[23.29451,59.02798],[23.29803,59.02047],[23.29672,59.01993],[23.29456,59.01893],[23.29373,59.01847],[23.29227,59.02366]]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "",
+        "category":     "Looduskaitsealad",
+        "style":        "looduskaitseala",
+        "visible":      true
+      },
+      "geometry":       {"type":"LineString", "coordinates": [[23.31575,59.02681],[23.31798,59.02436],[23.31368,59.0234],[23.31153,59.02406],[23.30285,59.02423],[23.30165,59.02555],[23.30219,59.02943],[23.29974,59.0298]]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "",
+        "category":     "Looduskaitsealad",
+        "style":        "looduskaitseala",
+        "visible":      true
+      },
+      "geometry":       {"type":"LineString", "coordinates": [[23.12468,59.03018],[23.12592,59.02791],[23.12278,59.0273],[23.12506,59.02711],[23.12604,59.02687],[23.12697,59.02627],[23.12847,59.02388],[23.12941,59.02282],[23.13061,59.02187],[23.13132,59.0216],[23.1299,59.02152],[23.12916,59.02124],[23.12796,59.02047],[23.12618,59.01982],[23.12486,59.0188],[23.12335,59.01785],[23.12299,59.01753],[23.12293,59.01723],[23.12334,59.01671],[23.12338,59.01649],[23.12354,59.01643],[23.12352,59.01597],[23.12372,59.01534],[23.12404,59.0147],[23.12408,59.01433],[23.12386,59.01354],[23.12344,59.01295],[23.12304,59.01258],[23.12206,59.01226],[23.12034,59.01206],[23.11937,59.012]]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "",
+        "category":     "Looduskaitsealad",
+        "style":        "looduskaitseala",
+        "visible":      true
+      },
+      "geometry":       {"type":"LineString", "coordinates": [[23.18669,59.00645],[23.18572,59.00563],[23.18551,59.00428],[23.18548,59.00378],[23.18568,59.00302],[23.18568,59.00264],[23.18588,59.00239],[23.18583,59.0019],[23.1861,59.00145],[23.18614,59.00108],[23.18636,59.00082],[23.18645,59.00049]]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title":        "TEST",
+        "text-field":   "1",
+        "category":     "TEST",
+        "style":        "TEST",
+        "visible":      true
+      },
+      "geometry":       {"type":"Point","coordinates":[23.26811,58.99945]}
+    }
+  ]
+}

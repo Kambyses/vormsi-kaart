@@ -1,0 +1,2487 @@
+{
+  "name": "eesti",
+  "version": 8,
+  "metadata": {
+  },
+  "sources": {
+    "eesti": {
+      "type": "vector",
+      "tiles": ["https://api.regio.ee/mvt/eesti@EPSG:900913/{z}/{x}/{y}.pbf?apikey=yFez3tV?kvEiQ4?!!kH$?BcnJeyLI5JRW?5U-sodpsxT2sF2P!HxZ!j7N0THYX-X"],
+      "scheme": "tms",
+      "tileSize": 512,
+      "maxzoom": 16
+    }
+  },
+  "sprite": "https://api.regio.ee/mvt/mvt/sprite?apikey=yFez3tV?kvEiQ4?!!kH$?BcnJeyLI5JRW?5U-sodpsxT2sF2P!HxZ!j7N0THYX-X",
+  "glyphs": "https://api.regio.ee/mvt/fonts/{fontstack}/{range}.pbf?apikey=yFez3tV?kvEiQ4?!!kH$?BcnJeyLI5JRW?5U-sodpsxT2sF2P!HxZ!j7N0THYX-X",
+  "layers": [
+    {
+      "id":"background",
+      "type":"background",
+      "paint":{
+        "background-color": "#e7f7fe"
+      }
+    }, {
+      "id": "waterbody_sea_outline",
+      "source-layer": "waterbody_sea",
+      "source": "eesti",
+      "shape": "valis/laanemeri_a:meresygavused",
+      "type": "line",
+      "paint": {
+        "line-width": 5,
+        "line-color": [
+          "case",
+          ["==", ["get", "depth"], "2-5"],     "#e7f7fe",
+          ["==", ["get", "depth"], "5-10"],    "#ceeffc",
+          ["==", ["get", "depth"], "10-20"],   "#b0e6fa",
+          ["==", ["get", "depth"], "20-50"],   "#b0e6fa",
+          ["==", ["get", "depth"], "50-100"],  "#b0e6fa",
+          ["==", ["get", "depth"], "100-200"], "#b0e6fa",
+          ["==", ["get", "depth"], ">200"],    "#b0e6fa",
+          "#b0e6fa"
+        ]
+      }
+    }, {
+      "id": "waterbody_sea",
+      "source-layer": "waterbody_sea",
+      "source": "eesti",
+      "shape": "valis/laanemeri_a:meresygavused",
+      "type": "fill",
+      "paint": {
+        "fill-color": [
+          "case",
+          ["==", ["get", "depth"], "2-5"],     "#e7f7fe",
+          ["==", ["get", "depth"], "5-10"],    "#ceeffc",
+          ["==", ["get", "depth"], "10-20"],   "#b0e6fa",
+          ["==", ["get", "depth"], "20-50"],   "#b0e6fa",
+          ["==", ["get", "depth"], "50-100"],  "#b0e6fa",
+          ["==", ["get", "depth"], "100-200"], "#b0e6fa",
+          ["==", ["get", "depth"], ">200"],    "#b0e6fa",
+          "rgb(255, 0, 0)"
+        ]
+      }
+    }, {
+      "id": "landcover",
+      "source-layer": "landcover",
+      "source": "eesti",
+      "shape": "est/maayld:maa_yld; est/maa:maa",
+      "type": "fill",
+      "filter": ["==", "country", "ee"],
+      "paint": {
+        "fill-color": "#faefcc"
+      }
+    }, {
+      "id": "landcover_outline",
+      "source-layer": "landcover",
+      "source": "eesti",
+      "shape": "est/maayld:maa_yld; est/maa:maa; maa_valis.shp:maa_valis",
+      "type": "line",
+      "filter": ["==", "country", "ee"],
+      "paint": {
+        "line-color": [
+          "case",
+          ["==", ["get", "country"], "ee"], "#02b2f0",
+          "rgba(237, 236, 219, 0.5)"
+        ],
+        "line-width": {"stops": [[5, 1], [6, 1], [13, 1]]}
+      }
+    }, {
+      "id": "landcover_wood",
+      "source-layer": "landcover_wood",
+      "source": "eesti",
+      "shape": "est/mets_gen:mets_gen",
+      "type": "fill",
+      "paint": {
+        "fill-color": "#b0e2ae",
+        "fill-opacity": {"stops": [[7, 0], [8, 1]]}
+      }
+    }, {
+      "id": "foreign_landcover",
+      "source-layer": "landcover",
+      "source": "eesti",
+      "shape": "maa_valis.shp:maa_valis",
+      "type": "fill",
+      "filter": ["!=", "country", "ee"],
+      "paint": {
+        "fill-color": "rgb(237, 236, 219)"
+      }
+    }, {
+      "id": "foreign_landcover_settlement",
+      "source-layer": "landcover_settlement",
+      "shape": "valis/slinn_a:euroopa_linn_area",
+      "source": "eesti",
+      "type": "fill",
+      "filter": ["!=", "country", "ee"],
+      "paint": {
+        "fill-color": {"stops": [[7, "#8a9a71"], [8, "#8a9a71"]]},
+        "fill-opacity": {"stops": [[6, 0], [7, 1]]}
+      }
+    }, {
+      "id": "landcover_settlement",
+      "source-layer": "landcover_settlement",
+      "source": "eesti",
+      "shape": "est/ho_ala_gen:ho_ala_gen; est/ho_ala:ho_ala",
+      "type": "fill",
+      "filter": ["==", "country", "ee"],
+      "paint": {
+        "fill-color": {"stops": [[9, "#8a9a71"], [10, "#8a9a71"], [14, "#8a9a71"], [15, "#a9b289"]]},
+        "fill-opacity": {"stops": [[6, 0], [7, 1]]}
+      }
+    }, {
+      "id": "landcover_forest_park",
+      "source-layer": "landcover_wood",
+      "source": "eesti",
+      "shape": "est/mets:mets_park",
+      "type": "fill",
+      "filter": ["in", "type_id", 3, 5, 7],
+      "paint": {
+        "fill-color": "#aee1ac",
+        "fill-opacity": [
+          "interpolate", ["linear"], ["zoom"],
+          13, ["case", ["==", ["get", "type_id"], 7], 0, 1],
+          14, 1
+        ]
+      }
+    }, {
+      "id": "landcover_wetland",
+      "source-layer": "landcover_wetland",
+      "source": "eesti",
+      "shape": "est/soo_500:soo_gen; est/soo:soo",
+      "type": "fill",
+      "paint": {
+        "fill-pattern": ["case", ["==", ["get", "type_id"], 32], "turvas", "soo_mustriga"]
+      }
+    }, {
+      "id": "stadion",
+      "source-layer": "landcover_field",
+      "source": "eesti",
+      "shape": "est/staadion:staadion; est/mets:staadioni_muru",
+      "type": "fill",
+      "filter": ["in", "type_id", 10, 11],
+      "paint": {
+        "fill-color": ["case", ["==", ["get", "type_id"], 10], "rgb(212, 222, 190)", "rgb(250, 250, 240)"],
+        "fill-outline-color": ["case", ["==", ["get", "type_id"], 10], "rgb(212, 222, 190)", "rgb(212, 212, 190)"]
+      }
+    }, {
+      "id": "waterbody_river",
+      "source-layer": "waterbody_river",
+      "source": "eesti",
+      "shape": "est/jogi:jogi; est/vetevork_joon:vetevork_joon",
+      "type": "line",
+      "filter": ["==", "$type", "LineString"],
+      "paint": {
+        "line-color": "rgb(125, 150, 190)",
+        "line-width": [
+          "interpolate", ["linear"], ["zoom"],
+          7,  ["case", ["==", ["get", "type_id"], 61], 1, 1],
+          8,  ["case", ["==", ["get", "type_id"], 61], 2, 1],
+          9,  ["case", ["==", ["get", "type_id"], 61], 3, 2],
+          10, ["case", ["==", ["get", "disp_class"], 1], 2, 1],
+          11, ["case", ["==", ["get", "disp_class"], 1], 2, ["==", ["get", "disp_class"], 2], 2, 1],
+          12, ["case", ["==", ["get", "disp_class"], 1], 2, ["==", ["get", "disp_class"], 2], 2, 1],
+          13, ["case", ["==", ["get", "disp_class"], 1], 3, ["==", ["get", "disp_class"], 3], 2, ["==", ["get", "disp_class"], 6], 0.5, 2],
+          14, ["case", ["==", ["get", "disp_class"], 1], 3, ["==", ["get", "disp_class"], 3], 2, ["==", ["get", "disp_class"], 6], 0.5, 2],
+          15, ["case", ["==", ["get", "disp_class"], 1], 3, ["==", ["get", "disp_class"], 3], 2, ["==", ["get", "disp_class"], 6], 1, 2]
+        ],
+        "line-opacity": [
+          "interpolate", ["linear"], ["zoom"],
+          13, ["case", ["==", ["get", "disp_class"], 6], 0.7, 1],
+          15, ["case", ["==", ["get", "disp_class"], 6], 1, 1]
+        ]
+      }
+    }, {
+      "id": "waterbody_river_fill_outline",
+      "source-layer": "waterbody_river",
+      "source": "eesti",
+      "shape": "est/vetevork_ala:vetevork_ala",
+      "type": "line",
+      "filter": ["==", "$type", "Polygon"],
+      "paint": {
+        "line-color": "rgb(125, 150, 190)",
+        "line-width": 1
+      }
+    }, {
+      "id": "waterbody_river_fill",
+      "source-layer": "waterbody_river",
+      "source": "eesti",
+      "shape": "est/vetevork_ala:vetevork_ala",
+      "type": "fill",
+      "filter": ["==", "$type", "Polygon"],
+      "paint": {
+        "fill-color": "rgb(125, 150, 190)"
+      }
+    }, {
+      "id": "waterbody_lake_outline",
+      "source-layer": "waterbody_lake",
+      "source": "eesti",
+      "shape": "est/jarv:jarv; est/vetevork_ala:vetevork_ala",
+      "type": "line",
+      "paint": {
+        "line-color": "#0ab3e9",
+        "line-width": 1
+      }
+    }, {
+      "id": "waterbody_lake",
+      "source-layer": "waterbody_lake",
+      "source": "eesti",
+      "shape": "est/jarv:jarv; est/vetevork_ala:vetevork_ala",
+      "type": "fill",
+      "paint": {
+        "fill-color": "#b4e7ec",
+        "fill-outline-color": {"stops": [[7, "rgba(0, 0, 0, 0)"], [8, "#0ab3e9"]]}
+      }
+    }, {
+      "id": "landcover_terrain",
+      "source-layer": "landcover_terrain",
+      "source": "eesti",
+      "shape": "est/astang_jarsak:astang_jarsak",
+      "type": "line",
+      "paint": {
+        "line-pattern": "jarsak",
+        "line-width": 4,
+        "line-opacity": 0.7
+      }
+    }, {
+      "id": "municipality_border_outline",
+      "source-layer": "admin_boundary",
+      "source": "eesti",
+      "shape": "est/v_piir:v_piir",
+      "type": "line",
+      "filter": ["==", "type", "municipality"],
+      "paint": {
+        "line-color": "rgb(219, 195, 219)",
+        "line-width": {
+          "stops": [[10, 0], [11, 3], [12, 4]]
+        }
+      }
+    }, {
+      "id": "municipality_border",
+      "source-layer": "admin_boundary",
+      "source": "eesti",
+      "shape": "est/v_piir:v_piir",
+      "type": "line",
+      "filter": ["==", "type", "municipality"],
+      "paint": {
+        "line-color": "rgb(202, 82, 105)",
+        "line-width": 1 ,
+        "line-dasharray": {"stops": [[10, [2, 0]], [11, [4, 2]]]}
+      }
+    }, {
+      "id": "county_border_outline",
+      "source-layer": "admin_boundary",
+      "source": "eesti",
+      "shape": "est/mk_piir:maakonnapiir",
+      "type": "line",
+      "filter": ["==", "type", "county"],
+      "paint": {
+        "line-color": "rgb(225, 200, 200)",
+        "line-width": {
+          "stops": [[8, 4], [10, 5]]
+        },
+        "line-opacity": {
+          "stops": [[7, 0], [8, 1]]
+        }
+      }
+    }, {
+      "id": "county_border",
+      "source-layer": "admin_boundary",
+      "source": "eesti",
+      "shape": "est/mk_piir:maakonnapiir",
+      "type": "line",
+      "filter": ["==", "type", "county"],
+      "paint": {
+        "line-color": "rgb(202, 82, 105)",
+        "line-width": 1,
+        "line-dasharray": {"stops": [[5, [0.5, 0.5]], [6, [2, 2]], [7, [3, 3]], [8, [4, 4]], [14, [6, 4]]]},
+        "line-opacity": {"stops": [[5, 0.5], [6, 1]]}
+      }
+    }, {
+      "id": "country_border",
+      "source-layer": "admin_boundary",
+      "source": "eesti",
+      "shape": "valis/riigipiir_koos:riigipiirid",
+      "type": "line",
+      "filter": ["==", "type", "country"],
+      "paint": {
+        "line-color": "rgb(203, 80, 0)",
+        "line-width": {
+          "stops": [[5, 1], [6, 2], [8, 3]]
+        }
+      }
+    }, {
+      "id": "building",
+      "source-layer": "building",
+      "source": "eesti",
+      "shape": "est/maja:maja",
+      "type": "fill",
+      "filter": ["==", "$type", "Polygon"],
+      "paint": {
+        "fill-color": [
+          "case",
+          ["==", ["get", "type_id"], 14], "rgba(0, 0, 0, 0)",
+          ["==", ["get", "type_id"], 15], "rgba(0, 0, 0, 0)",
+          ["==", ["get", "type_id"], 16], "rgba(0, 0, 0, 0)",
+          ["==", ["get", "type_id"], 19], "rgba(0, 0, 0, 0)",
+          ["==", ["get", "type_id"],  1], "#8a9a71",
+          ["==", ["get", "type_id"],  2], "#8a9a71",
+          ["==", ["get", "type_id"],  3], "#8a9a71",
+          ["==", ["get", "type_id"],  4], "#8a9a71",
+          ["==", ["get", "type_id"],  5], "#8a9a71",
+          ["==", ["get", "type_id"],  6], "#8a9a71",
+          ["==", ["get", "type_id"],  7], "#8a9a71",
+          ["==", ["get", "type_id"], 17], "#8a9a71",
+          ["==", ["get", "type_id"], 30], "#8a9a71",
+          ["==", ["get", "type_id"], 49], "#8a9a71",
+          ["==", ["get", "type_id"],  8], "#8a9a71",
+          ["==", ["get", "type_id"],  9], "#8a9a71",
+          ["==", ["get", "type_id"], 10], "#8a9a71",
+          ["==", ["get", "type_id"], 11], "#8a9a71",
+          ["==", ["get", "type_id"], 12], "#8a9a71",
+          ["==", ["get", "type_id"], 13], "#8a9a71",
+          ["==", ["get", "type_id"], 20], "#8a9a71",
+          ["==", ["get", "type_id"], 37], "#8a9a71",
+          "rgba(0, 0, 0, 0)"
+        ]
+      }
+    }, {
+      "id": "building_fill_pattern",
+      "source-layer": "building",
+      "source": "eesti",
+      "shape": "est/maja:maja",
+      "type": "fill",
+      "filter": ["all", ["==", "type_id", 19], ["==", "$type", "Polygon"]],
+      "paint": {
+        "fill-pattern": "maaaluse_gar_sisu"
+      }
+    }, {
+      "id": "building_dashed_outline",
+      "source-layer": "building",
+      "source": "eesti",
+      "shape": "est/maja:maja",
+      "type": "line",
+      "filter": ["all", ["in", "type_id", 14, 15, 16, 19], ["==", "$type", "Polygon"]],
+      "paint": {
+        "line-color": [
+          "case",
+          ["==", ["get", "type_id"], 14], "#8a9a71",
+          ["==", ["get", "type_id"], 15], "#8a9a71",
+          ["==", ["get", "type_id"], 16], "#8a9a71",
+          ["==", ["get", "type_id"], 19], "#8a9a71",
+          "rgba(0, 0, 0, 0)"
+        ],
+        "line-dasharray": {"stops": [[15, [2, 0]], [16, [3, 3]]]},
+        "line-width": 1
+      }
+    }, {
+      "id": "building_outline",
+      "source-layer": "building",
+      "source": "eesti",
+      "shape": "est/maja:maja",
+      "type": "line",
+      "filter": ["all", ["!in", "type_id", 14, 15, 16, 19], ["==", "$type", "Polygon"]],
+      "paint": {
+        "line-color": [
+          "case",
+          ["==", ["get", "type_id"],  1], "#8a9a71",
+          ["==", ["get", "type_id"],  2], "#8a9a71",
+          ["==", ["get", "type_id"],  3], "#8a9a71",
+          ["==", ["get", "type_id"],  4], "#8a9a71",
+          ["==", ["get", "type_id"],  5], "#8a9a71",
+          ["==", ["get", "type_id"],  6], "#8a9a71",
+          ["==", ["get", "type_id"],  7], "#8a9a71",
+          ["==", ["get", "type_id"], 17], "#8a9a71",
+          ["==", ["get", "type_id"], 30], "#8a9a71",
+          ["==", ["get", "type_id"], 49], "#8a9a71",
+          ["==", ["get", "type_id"],  8], "#8a9a71",
+          ["==", ["get", "type_id"],  9], "#8a9a71",
+          ["==", ["get", "type_id"], 10], "#8a9a71",
+          ["==", ["get", "type_id"], 11], "#8a9a71",
+          ["==", ["get", "type_id"], 12], "#8a9a71",
+          ["==", ["get", "type_id"], 13], "#8a9a71",
+          ["==", ["get", "type_id"], 20], "#8a9a71",
+          ["==", ["get", "type_id"], 37], "#8a9a71",
+          "rgba(0, 0, 0, 0)"
+        ],
+        "line-width": 1
+      }
+    }, {
+      "id": "tartumarathon_track",
+      "source": "eesti",
+      "source-layer": "road",
+      "shape": "est/tartumaratoni_rada:TartuMaratoni_rada",
+      "type": "line",
+      "filter": ["==", "label", "Tartu maratoni rada"],
+      "paint": {
+        "line-color": "rgb(200, 176, 158)",
+        "line-width": {
+          "stops": [[10, 6], [11, 7], [13, 7], [14, 10], [15, 11]]
+        }
+      },
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      }
+    }, {
+      "id": "walkway",
+      "source-layer": "road",
+      "source": "eesti",
+      "shape": "est/teed_3:tn_jalgtee",
+      "type": "line",
+      "filter": ["in", "type_id", 914, 915, 916, 917],
+      "paint": {
+        "line-color": "rgb(180, 190, 170)",
+        "line-width": {"stops": [[14, 1], [16, 2]]}
+      }
+    }, {
+      "id": "local_road_3_4",
+      "source-layer": "road",
+      "source": "eesti",
+      "shape": "est/teed_2:kohalik_tee3_4",
+      "type": "line",
+      "filter": ["==", "type_id", 811],
+      "paint": {
+        "line-color": "#706e6c",
+        "line-width": {"stops": [[11, 1], [12, 3], [13, 4], [14, 5], [15, 6], [16, 7]]}
+      },
+      "layout": {
+        "line-cap": "butt",
+        "line-join": "round"
+      }
+    }, {
+      "id": "local_road_2",
+      "source-layer": "road",
+      "source": "eesti",
+      "shape": "est/teed_2:kohalik_tee2",
+      "type": "line",
+      "filter": ["==", "type_id", 808],
+      "paint": {
+        "line-color": "#706e6c",
+        "line-width": {"stops": [[10, 1], [11, 3], [12, 4], [13, 5], [14, 6], [15, 7], [16, 8]]}
+      },
+      "layout": {
+        "line-cap": "butt",
+        "line-join": "round"
+      }
+    }, {
+      "id": "local_road_1",
+      "source-layer": "road",
+      "source": "eesti",
+      "shape": "est/teed_1:kohalik_tee1",
+      "type": "line",
+      "filter": ["==", "type_id", 606],
+      "paint": {
+        "line-color": "#706e6c",
+        "line-width": {"stops": [[9, 1], [10, 3], [11, 4], [12, 5], [13, 6], [14, 7], [15, 8], [16, 9]]}
+      },
+      "layout": {
+        "line-cap": "butt",
+        "line-join": "round"
+      }
+    }, {
+      "id": "street_entrance",
+      "source-layer": "road",
+      "source": "eesti",
+      "shape": "est/teed_3:tn_sissesoit",
+      "type": "line",
+      "filter": ["==", "type_id", 813],
+      "paint": {
+        "line-color": {"stops": [[13, "rgb(160, 160, 160)"], [14, "rgb(120, 120, 120)"]]},
+        "line-width": {"stops": [[13, 1], [14, 3], [15, 4], [16, 6]]}
+      },
+      "layout": {
+        "line-cap": "butt",
+        "line-join": "round"
+      }
+    }, {
+      "id": "street_between_buidlings",
+      "source-layer": "road",
+      "source": "eesti",
+      "shape": "est/teed_3:tn_majadevahel",
+      "type": "line",
+      "filter": ["==", "type_id", 812],
+      "paint": {
+        "line-color": {"stops": [[13, "rgb(160, 160, 160)"], [14, "rgb(120, 120, 120)"]]},
+        "line-width": {"stops": [[13, 1], [14, 3], [15, 4], [16, 6]]}
+      },
+      "layout": {
+        "line-cap": "butt",
+        "line-join": "round"
+      }
+    }, {
+      "id": "small_street_1_2",
+      "source-layer": "road",
+      "source": "eesti",
+      "shape": "est/teed_2:vaiketn1_2",
+      "type": "line",
+      "filter": ["in", "type_id", 809, 810],
+      "paint": {
+        "line-color": {"stops": [[11, "rgb(180, 180, 180)"], [12, "rgb(100, 100, 100)"]]},
+        "line-width": [
+          "interpolate", ["linear"], ["zoom"],
+          11, ["case", ["==", ["get", "type_id"], 809], 1, 0],
+          12, 3, 13, 4, 14, 6, 15, 7, 16, 9
+        ]
+      },
+      "layout": {
+        "line-cap": "butt",
+        "line-join": "round"
+      }
+    }, {
+      "id": "side_street",
+      "source-layer": "road",
+      "source": "eesti",
+      "shape": "est/teed_1:korvaltn",
+      "type": "line",
+      "filter": ["==", "type_id", 707],
+      "paint": {
+        "line-color": {"stops": [[10, "rgb(150, 150, 150)"], [11, "rgb(120, 120, 150)"]]},
+        "line-width": {"stops": [[10, 1], [11, 3.5], [12, 4.5], [13, 5.5], [14, 8], [15, 9], [16, 10]]}
+      },
+      "layout": {
+        "line-cap": "butt",
+        "line-join": "round"
+      }
+    }, {
+      "id": "main_street",
+      "source-layer": "road",
+      "source": "eesti",
+      "shape": "est/teed_1:peatanav",
+      "type": "line",
+      "filter": ["in", "type_id", 305, 405, 505],
+      "paint": {
+        "line-color": "rgb(140, 140, 130)",
+        "line-width": {"stops": [[9, 3], [10, 4], [11, 5], [12, 6], [13, 7], [14, 8], [15, 10], [16, 12]]}
+      }
+    }, {
+      "id": "side_road_2",
+      "source-layer": "road",
+      "source": "eesti",
+      "shape": "est/teed_1:korvalmnt2_maal; est/teed_1:korvalmnt2_linnas",
+      "type": "line",
+      "filter": ["in", "type_id", 504, 604],
+      "paint": {
+        "line-color": [
+          "case",
+          ["all", ["==", ["get", "type_id"], 504], ["<", ["get", "a_type"], 341]], "rgb(140, 140, 130)",
+          ["all", ["==", ["get", "type_id"], 504], [">", ["get", "a_type"], 341]], "rgb(110, 110, 100)",
+          ["==", ["get", "type_id"], 604], "#786b5e",
+          "rgb(110, 110, 100)"
+        ],
+        "line-width": {"stops": [[9, 3], [10, 4], [11, 5], [12, 6], [13, 7], [14, 8], [15, 9], [16, 10]]}
+      }
+    }, {
+      "id": "side_road_1",
+      "source-layer": "road",
+      "source": "eesti",
+      "shape": "est/teed_1:korvalmnt1_maal; est/teed_1:korvalmnt1_linnas; korvalmnt1_valis.shp:korvalmnt1_valis",
+      "type": "line",
+      "filter": ["in", "type_id", 304, 404],
+      "paint": {
+        "line-color": [
+          "case",
+          ["all", ["==", ["get", "country"], "ee"], ["<", ["get", "a_type"], 341]], "rgb(140, 140, 130)",
+          ["all", ["==", ["get", "country"], "ee"], [">", ["get", "a_type"], 341]], "rgb(110, 110, 100)",
+          "rgb(110, 110, 100)"
+        ],
+        "line-width": {"stops": [[8, 3], [9, 4], [10, 5], [11, 6], [12, 7], [13, 8], [14, 9], [15, 10], [16, 11]]}
+      }
+    }, {
+      "id": "side_road",
+      "source-layer": "road",
+      "source": "eesti",
+      "shape": "est/teed_1:tugiteed; tugiteed_valis.shp:tugiteed_valis",
+      "type": "line",
+      "filter": ["in", "type_id", 203, 303, 403, 503],
+      "paint": {
+        "line-color": {"stops": [[6, "rgb(218, 143, 81)"], [7, "rgb(160, 160, 150)"], [8, "rgb(150, 150, 140)"], [9, "rgb(140, 140, 130)"]]},
+        "line-width": {"stops": [[6, 1], [7, 3], [8, 4], [9, 5], [10, 6], [11, 7], [12, 8], [13, 9], [14, 10], [15, 11], [16, 12]]}
+      }
+    }, {
+      "id": "main_road",
+      "source-layer": "road",
+      "source": "eesti",
+      "shape": "est/teed_1:pohiteed; pohiteed_valis.shp:pohiteed_valis",
+      "type": "line",
+      "filter": ["in", "type_id", 201, 202, 302, 402, 502],
+      "paint": {
+        "line-color": {"stops": [[5, "rgb(218, 143, 81)"], [6, "rgb(160, 160, 150)"], [7, "rgb(150, 150, 140)"], [8, "rgb(140, 140, 130)"]]},
+        "line-width": {"stops": [[5, 1], [6, 3], [7, 4], [8, 5], [9, 6], [10, 7], [11, 8], [12, 9], [13, 10], [14, 11], [15, 12], [16, 13]]}
+      }
+    }, {
+      "id": "highway",
+      "source-layer": "road",
+      "source": "eesti",
+      "shape": "est/teed_1:kiirtee",
+      "type": "line",
+      "filter": ["all", ["in", "type_id", 201, 202, 302, 402, 502], ["==", "special_type", 5], [">", "a_type", 340]],
+      "paint": {
+        "line-color": {"stops": [[6, "rgb(170, 125, 60)"], [7, "rgb(150, 85, 10)"]]},
+        "line-width": {"stops": [[5, 0], [6, 4], [7, 6], [8, 7], [9, 8], [10, 9], [11, 10], [12, 11], [13, 12], [14, 13], [15, 14], [16, 16]]}
+      }
+    }, {
+      "id": "planned_road",
+      "source-layer": "road",
+      "source": "eesti",
+      "shape": "est/teed_3:tee_planeeritav",
+      "type": "line",
+      "filter": ["==", "type_id", 999],
+      "paint": {
+        "line-color": {"stops": [[14, "rgb(180, 180, 170)"], [15, "rgb(170, 170, 150)"]]},
+        "line-width": 1,
+        "line-gap-width": {"stops": [[13, 0], [14, 2], [15, 3]]},
+        "line-dasharray": {"stops": [[14, [4, 4]], [15, [6, 4]]]}
+      }
+    }, {
+      "id": "stairs",
+      "source-layer": "road",
+      "source": "eesti",
+      "shape": "est/trepid:trepid",
+      "type": "line",
+      "filter": ["all", ["in", "type_id", 914, 915, 916, 917], ["==", "special_type", 99]],
+      "paint": {
+        "line-color": "rgb(180, 190, 170)",
+        "line-width": {"stops": [[15, 4], [16, 6]]},
+        "line-dasharray": [0.3, 0.75]
+      }
+    }, {
+      "id": "area_beneath_roads",
+      "source-layer": "landcover_field",
+      "source": "eesti",
+      "shape": "est/l_plats:l_plats_tee_all",
+      "type": "fill",
+      "filter": ["in", "type_id", 24, 25],
+      "paint": {
+        "fill-color": "rgb(250, 250, 240)",
+        "fill-outline-color": "rgb(212, 212, 190)"
+      }
+    }, {
+      "id": "area_beneath_roads_outline",
+      "source-layer": "landcover_field",
+      "source": "eesti",
+      "shape": "est/l_plats:l_plats_tee_all",
+      "type": "line",
+      "filter": ["in", "type_id", 24, 25],
+      "paint": {
+        "line-color": "rgb(212, 212, 190)"
+      }
+    }, {
+      "id": "area_between_roads",
+      "source-layer": "landcover_field",
+      "source": "eesti",
+      "shape": "est/l_plats:l_plats_teede_vahel",
+      "type": "fill",
+      "filter": ["in", "type_id", 22, 26],
+      "paint": {
+        "fill-color": "rgb(250, 250, 240)"
+      }
+    }, {
+      "id": "area_between_roads_outline",
+      "source-layer": "landcover_field",
+      "source": "eesti",
+      "shape": "est/l_plats:l_plats_teede_vahel",
+      "type": "line",
+      "filter": ["in", "type_id", 22, 26],
+      "paint": {
+        "line-color": "rgb(212, 212, 190)"
+      }
+    }, {
+      "id": "airfield",
+      "source-layer": "landcover_field",
+      "source": "eesti",
+      "shape": "est/l_plats:l_plats_teede_vahel",
+      "type": "fill",
+      "filter": ["==", "type_id", 29],
+      "paint": {
+        "fill-color": "rgb(250, 250, 240)"
+      }
+    }, {
+      "id": "airfield_outline",
+      "source-layer": "landcover_field",
+      "source": "eesti",
+      "shape": "est/l_plats:l_plats_teede_vahel",
+      "type": "line",
+      "filter": ["==", "type_id", 29],
+      "paint": {
+        "line-color": "rgb(180, 180, 180)"
+      }
+    }, {
+      "id": "lawn",
+      "source-layer": "landcover_field",
+      "source": "eesti",
+      "shape": "est/mets:platsi_muru",
+      "type": "fill",
+      "filter": ["==", "type_id", 7],
+      "paint": {
+        "fill-color": "rgb(212, 222, 190)"
+      }
+    }, {
+      "id": "waterway",
+      "source-layer": "waterway",
+      "source": "eesti",
+      "shape": "est/praamiliinid:praamiliinid",
+      "type": "line",
+      "paint": {
+        "line-color": "#64cef6",
+        "line-width": {"stops": [[15, 1], [16, 2]]},
+        "line-dasharray": {"stops": [[8, [4, 2]], [9, [4, 3]], [16, [5, 2]]]}
+      }
+    }, {
+      "id": "tram_tunnel",
+      "source-layer": "tram",
+      "source": "eesti",
+      "shape": "est/trammitee:trammitee_tunnel",
+      "type": "line",
+      "filter": ["==", "type_id", 2],
+      "paint": {
+        "line-color": "rgb(250, 250, 240)",
+        "line-width": 2
+      }
+    }, {
+      "id": "tram_tunnel_midline",
+      "source-layer": "tram",
+      "source": "eesti",
+      "shape": "est/trammitee:trammitee_tunnel",
+      "type": "line",
+      "filter": ["==", "type_id", 2],
+      "paint": {
+        "line-color": "rgb(150, 150, 150)",
+        "line-width": 1,
+        "line-dasharray": [3, 3]
+      }
+    }, {
+      "id": "cemetery",
+      "source-layer": "landcover_field",
+      "source": "eesti",
+      "shape": "est/kalmistu:kalmistud",
+      "type": "fill",
+      "filter": ["==", "type_id", 9],
+      "paint": {
+        "fill-pattern": "kalmistu"
+      }
+    }, {
+      "id": "cemetery_outline",
+      "source-layer": "landcover_field",
+      "source": "eesti",
+      "shape": "est/kalmistu:kalmistud",
+      "type": "line",
+      "filter": ["==", "type_id", 9],
+      "paint": {
+        "line-color": "rgb(100, 120, 100)",
+        "line-width": {"stops": [[14, 0.5], [15, 1]]},
+        "line-dasharray": {"stops": [[14, [5, 5]], [15, [3, 4]]]}
+      }
+    }, {
+      "id": "tartumarathon_track_midline",
+      "source-layer": "road",
+      "source": "eesti",
+      "shape": "est/tartumaratoni_rada:TartuMaratoni_rada",
+      "type": "line",
+      "filter": ["==", "label", "Tartu maratoni rada"],
+      "paint": {
+        "line-color": "rgb(249, 248, 240)",
+        "line-width": 1
+      }
+    }, {
+      "id": "local_road_3_4_midline",
+      "source-layer": "road",
+      "source": "eesti",
+      "shape": "est/teed_2:kohalik_tee3_4",
+      "type": "line",
+      "filter": ["==", "type_id", 811],
+      "paint": {
+        "line-color": "#ffffff",
+        "line-width": {"stops": [[11, 0], [12, 2], [13, 3], [14, 4], [15, 5], [16, 6]]}
+      }
+    }, {
+      "id": "local_road_2_midline",
+      "source-layer": "road",
+      "source": "eesti",
+      "shape": "est/teed_2:kohalik_tee2",
+      "type": "line",
+      "filter": ["==", "type_id", 808],
+      "paint": {
+        "line-color": "#ffffff",
+        "line-width": {"stops": [[10, 0], [11, 2], [12, 3], [13, 4], [14, 5], [15, 6], [16, 7]]}
+      }
+    }, {
+      "id": "local_road_1_midline",
+      "source-layer": "road",
+      "source": "eesti",
+      "shape": "est/teed_1:kohalik_tee1",
+      "type": "line",
+      "filter": ["==", "type_id", 606],
+      "paint": {
+        "line-color": "#ffffff",
+        "line-width": {"stops": [[9, 0], [10, 2], [11, 3], [12, 4], [13, 5], [14, 6], [15, 7], [16, 8]]}
+      }
+    }, {
+      "id": "street_entrance_midline",
+      "source-layer": "road",
+      "source": "eesti",
+      "shape": "est/teed_3:tn_sissesoit",
+      "type": "line",
+      "filter": ["==", "type_id", 813],
+      "paint": {
+        "line-color": "rgb(250, 250, 240)",
+        "line-width": {"stops": [[13, 0], [14, 2], [15, 3], [16, 5]]}
+      }
+    }, {
+      "id": "street_between_buidlings_midline",
+      "source-layer": "road",
+      "source": "eesti",
+      "shape": "est/teed_3:tn_majadevahel",
+      "type": "line",
+      "filter": ["==", "type_id", 812],
+      "paint": {
+        "line-color": "rgb(250, 250, 240)",
+        "line-width": {"stops": [[13, 0], [14, 2], [15, 3], [16, 5]]}
+      }
+    }, {
+      "id": "small_street_1_2_midline",
+      "source-layer": "road",
+      "source": "eesti",
+      "shape": "est/teed_2:vaiketn1_2",
+      "type": "line",
+      "filter": ["in", "type_id", 809, 810],
+      "paint": {
+        "line-color": "rgb(250, 250, 240)",
+        "line-width": {"stops": [[11, 0], [12, 2], [13, 3], [14, 5], [15, 6], [16, 8]]}
+      }
+    }, {
+      "id": "side_street_midline",
+      "source-layer": "road",
+      "source": "eesti",
+      "shape": "est/teed_1:korvaltn",
+      "type": "line",
+      "filter": ["==", "type_id", 707],
+      "paint": {
+        "line-color": "rgb(250, 250, 240)",
+        "line-width": {"stops": [[10, 0], [11, 2.5], [12, 3.5], [13, 4.5], [14, 7], [15, 8], [16, 9]]}
+      }
+    }, {
+      "id": "main_street_midline",
+      "source-layer": "road",
+      "source": "eesti",
+      "shape": "est/teed_1:peatanav_maal; est/teed_1:peatanav_linnas",
+      "type": "line",
+      "filter": ["in", "type_id", 305, 405, 505],
+      "paint": {
+        "line-color": ["case", [">", ["get", "a_type"], 341],"rgb(250, 250, 240)", "rgb(247, 227, 145)"],
+        "line-width": {"stops": [[9, 2], [10, 3], [11, 4], [12, 5], [13, 6], [14, 7], [15, 9], [16, 11]]}
+      }
+    }, {
+      "id": "side_road_2_midline",
+      "source-layer": "road",
+      "source": "eesti",
+      "shape": "est/teed_1:korvalmnt2_maal; est/teed_1:korvalmnt2_linnas",
+      "type": "line",
+      "filter": ["in", "type_id", 504, 604],
+      "paint": {
+        "line-color": [
+          "case",
+          ["all", ["==", ["get", "type_id"], 504], ["<", ["get", "a_type"], 341]], "rgb(247, 227, 145)",
+          ["all", ["==", ["get", "type_id"], 504], [">", ["get", "a_type"], 341]], "rgb(250, 250, 240)",
+          ["==", ["get", "type_id"], 604], "#f49e38",
+          "rgb(247, 227, 145)"
+        ],
+        "line-width": {"stops": [[9, 2], [10, 3], [11, 4], [12, 5], [13, 6], [14, 7], [15, 8], [16, 9]]}
+      }
+    }, {
+      "id": "side_road_1_midline",
+      "source-layer": "road",
+      "source": "eesti",
+      "shape": "est/teed_1:korvalmnt1_maal; est/teed_1:korvalmnt1_linnas; korvalmnt1_valis.shp:korvalmnt1_valis",
+      "type": "line",
+      "filter": ["in", "type_id", 304, 404],
+      "paint": {
+        "line-color": [
+          "case",
+          ["all", ["==", ["get", "country"], "ee"], ["<", ["get", "a_type"], 341]], "rgb(247, 227, 145)",
+          ["all", ["==", ["get", "country"], "ee"], [">", ["get", "a_type"], 341]], "rgb(250, 250, 240)",
+          "rgb(250, 250, 240)"
+        ],
+        "line-width": {"stops": [[8, 2], [9, 3], [10, 4], [11, 5], [12, 6], [13, 7], [14, 8], [15, 9], [16, 10]]}
+      }
+    }, {
+      "id": "side_road_midline",
+      "source-layer": "road",
+      "source": "eesti",
+      "shape": "est/teed_1:tugiteed; tugiteed_valis.shp:tugiteed_valis",
+      "type": "line",
+      "filter": ["in", "type_id", 203, 303, 403, 503],
+      "paint": {
+        "line-color": "rgb(247, 227, 145)",
+        "line-width": {"stops": [[6, 0], [7, 2], [8, 3], [9, 4], [10, 5], [11, 6], [12, 7], [13, 8], [14, 9], [15, 10], [16, 11]]}
+      }
+    }, {
+      "id": "main_road_midline",
+      "source-layer": "road",
+      "source": "eesti",
+      "shape": "est/teed_1:pohiteed; pohiteed_valis.shp:pohiteed_valis",
+      "type": "line",
+      "filter": ["in", "type_id", 201, 202, 302, 402, 502],
+      "paint": {
+        "line-color": "rgb(227, 187, 125)",
+        "line-width": {"stops": [[5, 0], [6, 2], [7, 3], [8, 4], [9, 5], [10, 6], [11, 7], [12, 8], [13, 9], [14, 10], [15, 11], [16, 12]]}
+      },
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      }
+    }, {
+      "id": "side_road_2_tunnel",
+      "source-layer": "tunnel",
+      "source": "eesti",
+      "shape": "est/tunnelid:korvalmnt2_maal_tunnel",
+      "type": "line",
+      "filter": ["any", ["==", "type_id", 604], ["all", ["==", "type_id", 504], [">", "a_type", 341]]],
+      "paint": {
+        "line-color": "rgb(110, 110, 100)",
+        "line-width": {"stops": [[14, 8], [15, 9], [16, 10]]}
+      }
+    }, {
+      "id": "side_road_2_tunnel_midline",
+      "source-layer": "tunnel",
+      "source": "eesti",
+      "shape": "est/tunnelid:korvalmnt2_maal_tunnel",
+      "type": "line",
+      "filter": ["any", ["==", "type_id", 604], ["all", ["==", "type_id", 504], [">", "a_type", 341]]],
+      "paint": {
+        "line-color": "rgb(250, 250, 240)",
+        "line-width": {"stops": [[14, 7], [15, 8], [16, 9]]}
+      }
+    }, {
+      "id": "side_road_2_tunnel_pattern",
+      "source-layer": "tunnel",
+      "source": "eesti",
+      "shape": "est/tunnelid:korvalmnt2_maal_tunnel",
+      "type": "line",
+      "filter": ["any", ["==", "type_id", 604], ["all", ["==", "type_id", 504], [">", "a_type", 341]]],
+      "paint": {
+        "line-color": "rgba(110, 110, 100, 0.5)",
+        "line-width": {"stops": [[14, 7], [15, 8], [16, 9]]},
+        "line-dasharray": [0.05, 0.25]
+      }
+    }, {
+      "id": "main_road_tunnel",
+      "source-layer": "tunnel",
+      "source": "eesti",
+      "shape": "est/tunnelid:pohitee_tunnel",
+      "type": "line",
+      "filter": ["in", "type_id", 201, 202, 302, 402, 502],
+      "paint": {
+        "line-color": {"stops": [[5, "rgb(218, 143, 81)"], [6, "rgb(160, 160, 150)"], [7, "rgb(150, 150, 140)"], [8, "rgb(140, 140, 130)"]]},
+        "line-width": {"stops": [[5, 1], [6, 3], [7, 4], [8, 5], [9, 6], [10, 7], [11, 8], [12, 9], [13, 10], [14, 11], [15, 12], [16, 13]]}
+      }
+    }, {
+      "id": "main_road_tunnel_midline",
+      "source-layer": "tunnel",
+      "source": "eesti",
+      "shape": "est/tunnelid:pohitee_tunnel",
+      "type": "line",
+      "filter": ["in", "type_id", 201, 202, 302, 402, 502],
+      "paint": {
+        "line-color": "rgb(227, 187, 125)",
+        "line-width": {"stops": [[5, 0], [6, 2], [7, 3], [8, 4], [9, 5], [10, 6], [11, 0], [12, 8], [13, 9], [14, 10], [15, 11], [16, 12]]}
+      }
+    }, {
+      "id": "main_road_tunnel_pattern",
+      "source-layer": "tunnel",
+      "source": "eesti",
+      "shape": "est/tunnelid:pohitee_tunnel",
+      "type": "line",
+      "filter": ["in", "type_id", 201, 202, 302, 402, 502],
+      "paint": {
+        "line-color": "rgb(255, 230, 180)",
+        "line-width": {"stops": [[11, 0], [12, 8], [13, 9], [14, 10], [15, 11], [16, 12]]},
+        "line-dasharray": [0.2, 0.1]
+      }
+    }, {
+      "id": "highway_tunnel",
+      "source-layer": "tunnel",
+      "source": "eesti",
+      "shape": "est/tunnelid:kiirtee_tunnel",
+      "type": "line",
+      "filter": ["all", ["==", "type_id", 201], ["==", "special_type", 5], [">", "a_type", 340]],
+      "paint": {
+        "line-color": {"stops": [[5, "rgb(218, 143, 81)"], [6, "rgb(160, 160, 150)"], [7, "rgb(150, 150, 140)"], [8, "rgb(140, 140, 130)"]]},
+        "line-width": {"stops": [[5, 1], [6, 3], [7, 4], [8, 5], [9, 6], [10, 7], [11, 8], [12, 9], [13, 10], [14, 11], [15, 12], [16, 13]]}
+      }
+    }, {
+      "id": "highway_tunnel_midline",
+      "source-layer": "tunnel",
+      "source": "eesti",
+      "shape": "est/tunnelid:kiirtee_tunnel",
+      "type": "line",
+      "filter": ["in", "type_id", 201, 202, 302, 402, 502],
+      "paint": {
+        "line-color": "rgb(227, 187, 125)",
+        "line-width": {"stops": [[5, 0], [6, 2], [7, 3], [8, 4], [9, 5], [10, 6], [11, 0], [12, 8], [13, 9], [14, 10], [15, 11], [16, 12]]}
+      }
+    }, {
+      "id": "highway_tunnel_pattern",
+      "source-layer": "tunnel",
+      "source": "eesti",
+      "shape": "est/tunnelid:kiirtee_tunnel",
+      "type": "line",
+      "filter": ["in", "type_id", 201, 202, 302, 402, 502],
+      "paint": {
+        "line-color": "rgb(255, 230, 180)",
+        "line-width": {"stops": [[11, 0], [12, 8], [13, 9], [14, 10], [15, 11], [16, 12]]},
+        "line-dasharray": [0.2, 0.1]
+      }
+    }, {
+      "id": "railway_branch",
+      "source-layer": "railway",
+      "source": "eesti",
+      "shape": "est/raudtee1:raudteeharu_2;est/raudtee1:raudteeharu_1",
+      "type": "line",
+      "filter": ["in", "disp_class", 4, 5],
+      "paint": {
+        "line-color": "rgb(96, 96, 96)",
+        "line-width": 1
+      }
+    }, {
+      "id": "railway_service",
+      "source-layer": "railway",
+      "source": "eesti",
+      "shape": "est/raudtee1:raudtee_ametk",
+      "type": "line",
+      "filter": ["in", "disp_class", 2, 3],
+      "paint": {
+        "line-color": {"stops": [[10, "rgb(75, 75, 75)"], [12, "rgb(116, 116, 116)"], [13, "rgb(106, 106, 106)"]]},
+        "line-width": {"stops": [[10, 1], [12, 1.5], [13, 1.5]]}
+      }
+    }, {
+      "id": "railway_service_pattern",
+      "source-layer": "railway",
+      "source": "eesti",
+      "shape": "est/raudtee1:raudtee_ametk",
+      "type": "line",
+      "filter": ["in", "disp_class", 2, 3],
+      "paint": {
+        "line-color": "rgb(96, 96, 96)",
+        "line-width": {"stops": [[11, 0], [12, 3.5], [13, 4]]},
+        "line-dasharray": {"stops": [[12, [0.1, 1]], [13, [0.3, 1.25]]]}
+      }
+    }, {
+      "id": "railway",
+      "source-layer": "railway",
+      "source": "eesti",
+      "shape": "est/raudt_gen:raudt_gen; est/raudtee1:reisirongid; raudt_gen_valis.shp:raudt_gen_valis; raudtee1_valis.shp:raudteeharu_2_valis:raudteeharu_1_valis:raudtee_ametk_valis:reisirongid_valis",
+      "type": "line",
+      "filter": ["any", ["==", "disp_class", 1], ["==", "type_id", 30]],
+      "paint": {
+        "line-color": {"stops": [[6, "rgb(100, 100, 100)"], [7, "rgb(30, 30, 30)"], [8, "rgb(60, 60, 60)"], [9, "rgb(90, 90, 90)"]]},
+        "line-width": {"stops": [[5, 0], [6, 1], [7, 2], [8, 3], [9, 3], [12, 3], [13, 3], [15, 4]]}
+      }
+    }, {
+      "id": "railway_pattern",
+      "source-layer": "railway",
+      "source": "eesti",
+      "shape": "est/raudt_gen:raudt_gen; est/raudtee1:reisirongid; raudt_gen_valis.shp:raudt_gen_valis; raudtee1_valis.shp:raudteeharu_2_valis:raudteeharu_1_valis:raudtee_ametk_valis:reisirongid_valis",
+      "type": "line",
+      "filter": ["any", ["==", "disp_class", 1], ["all", ["==", "type_id", 30]]],
+      "paint": {
+        "line-color": "rgb(250, 250, 250)",
+        "line-width": {"stops": [[6, 0], [6, 1], [7, 1], [8, 2], [9, 1.6], [12, 1.6], [13, 1.6], [15, 2.6]]},
+        "line-dasharray": {"stops": [[6, [6, 6]], [8, [4, 4]], [9, [6, 6]], [12, [6, 6]], [13, [8, 8]], [15, [6, 6]]]}
+      }
+    }, {
+      "id": "tram",
+      "source-layer": "tram",
+      "source": "eesti",
+      "shape": "est/trammitee:trammitee",
+      "type": "line",
+      "filter": ["==", "type_id", 0],
+      "paint": {
+        "line-color": "rgb(250, 250, 240)",
+        "line-width": 2
+      }
+    }, {
+      "id": "tram_midline",
+      "source-layer": "tram",
+      "source": "eesti",
+      "shape": "est/trammitee:trammitee",
+      "type": "line",
+      "filter": ["==", "type_id", 0],
+      "paint": {
+        "line-color": "rgb(77, 77, 77)",
+        "line-width": 1
+      }
+    }, {
+      "id": "walkway_road_overpass",
+      "source-layer": "road_overpass",
+      "source": "eesti",
+      "shape": "est/sillad_viaduktid:tn_jalgtee_viadukt",
+      "type": "line",
+      "filter": ["in", "type_id", 914, 915, 916, 917],
+      "paint": {
+        "line-color": "rgb(180, 190, 170)",
+        "line-width": 4.6
+      }
+    }, {
+      "id": "walkway_road_overpass_midline",
+      "source-layer": "road_overpass",
+      "source": "eesti",
+      "shape": "est/sillad_viaduktid:tn_jalgtee_viadukt",
+      "type": "line",
+      "filter": ["in", "type_id", 914, 915, 916, 917],
+      "paint": {
+        "line-color": "rgb(255, 255, 255)",
+        "line-width": 2
+      }
+    }, {
+      "id": "local_road_2_overpass",
+      "source-layer": "road_overpass",
+      "source": "eesti",
+      "shape": "est/sillad_viaduktid:kohalik_tee2_viadukt",
+      "type": "line",
+      "filter": ["==", "type_id", 808],
+      "paint": {
+        "line-color": "#706e6c",
+        "line-width": {"stops": [[10, 1], [11, 3], [12, 4], [13, 5], [14, 6], [15, 7], [16, 8]]}
+      },
+      "layout": {
+        "line-cap": "butt",
+        "line-join": "round"
+      }
+    }, {
+      "id": "local_road_2_overpass_midline",
+      "source-layer": "road_overpass",
+      "source": "eesti",
+      "shape": "est/sillad_viaduktid:kohalik_tee2_viadukt",
+      "type": "line",
+      "filter": ["==", "type_id", 808],
+      "paint": {
+        "line-color": "#ffffff",
+        "line-width": {"stops": [[10, 0], [11, 2], [12, 3], [13, 4], [14, 5], [15, 6], [16, 7]]}
+      }
+    }, {
+      "id": "local_road_1_overpass",
+      "source-layer": "road_overpass",
+      "source": "eesti",
+      "shape": "est/sillad_viaduktid:kohalik_tee1_viadukt",
+      "type": "line",
+      "filter": ["==", "type_id", 606],
+      "paint": {
+        "line-color": "#706e6c",
+        "line-width": {"stops": [[9, 1], [10, 3], [11, 4], [12, 5], [13, 6], [14, 7], [15, 8], [16, 9]]}
+      },
+      "layout": {
+        "line-cap": "butt",
+        "line-join": "round"
+      }
+    }, {
+      "id": "local_road_1_overpass_midline",
+      "source-layer": "road_overpass",
+      "source": "eesti",
+      "shape": "est/sillad_viaduktid:kohalik_tee1_viadukt",
+      "type": "line",
+      "filter": ["==", "type_id", 606],
+      "paint": {
+        "line-color": "#ffffff",
+        "line-width": {"stops": [[9, 0], [10, 2], [11, 3], [12, 4], [13, 5], [14, 6], [15, 7], [16, 8]]}
+      }
+    }, {
+      "id": "small_street_1_2_overpass",
+      "source-layer": "road_overpass",
+      "source": "eesti",
+      "shape": "est/sillad_viaduktid:vaiketn1_2_viadukt",
+      "type": "line",
+      "filter": ["in", "type_id", 809, 810],
+      "paint": {
+        "line-color": {"stops": [[11, "rgb(180, 180, 180)"], [12, "rgb(100, 100, 100)"]]},
+        "line-width": [
+          "interpolate", ["linear"], ["zoom"],
+          11, ["case", ["==", ["get", "type_id"], 809], 1, 0],
+          12, 3, 13, 4, 14, 6, 15, 7, 16, 9
+        ]
+      },
+      "layout": {
+        "line-cap": "butt",
+        "line-join": "round"
+      }
+    }, {
+      "id": "small_street_1_2_overpass_midline",
+      "source-layer": "road_overpass",
+      "source": "eesti",
+      "shape": "est/sillad_viaduktid:vaiketn1_2_viadukt",
+      "type": "line",
+      "filter": ["in", "type_id", 809, 810],
+      "paint": {
+        "line-color": "rgb(250, 250, 240)",
+        "line-width": {"stops": [[11, 0], [12, 2], [13, 3], [14, 5], [15, 6], [16, 8]]}
+      }
+    }, {
+      "id": "side_street_overpass",
+      "source-layer": "road_overpass",
+      "source": "eesti",
+      "shape": "est/sillad_viaduktid:korvaltn_viadukt_maa",
+      "type": "line",
+      "filter": ["==", "type_id", 707],
+      "paint": {
+        "line-color": {"stops": [[10, "rgb(150, 150, 150)"], [11, "rgb(120, 120, 150)"]]},
+        "line-width": {"stops": [[10, 1], [11, 3.5], [12, 4.5], [13, 5.5], [14, 8], [15, 9], [16, 10]]}
+      },
+      "layout": {
+        "line-cap": "butt",
+        "line-join": "round"
+      }
+    }, {
+      "id": "side_street_overpass_midline",
+      "source-layer": "road_overpass",
+      "source": "eesti",
+      "shape": "est/sillad_viaduktid:korvaltn_viadukt_maa",
+      "type": "line",
+      "filter": ["==", "type_id", 707],
+      "paint": {
+        "line-color": "rgb(250, 250, 240)",
+        "line-width": {"stops": [[10, 0], [11, 2.5], [12, 3.5], [13, 4.5], [14, 7], [15, 8], [16, 9]]}
+      }
+    }, {
+      "id": "main_street_overpass",
+      "source-layer": "road_overpass",
+      "source": "eesti",
+      "shape": "est/sillad_viaduktid:peatanav_viadukt_maa; est/sillad_viaduktid:peatanav_viadukt_linn",
+      "type": "line",
+      "filter": ["in", "type_id", 305, 405, 505],
+      "paint": {
+        "line-color": "rgb(140, 140, 130)",
+        "line-width": {"stops": [[9, 3], [10, 4], [11, 5], [12, 6], [13, 7], [14, 8], [15, 10], [16, 12]]}
+      }
+    }, {
+      "id": "main_street_overpass_midline",
+      "source-layer": "road_overpass",
+      "source": "eesti",
+      "shape": "est/sillad_viaduktid:peatanav_viadukt_maa; est/sillad_viaduktid:peatanav_viadukt_linn",
+      "type": "line",
+      "filter": ["in", "type_id", 305, 405, 505],
+      "paint": {
+        "line-color": ["case", [">", ["get", "a_type"], 341],"rgb(250, 250, 240)", "rgb(247, 227, 145)"],
+        "line-width": {"stops": [[9, 2], [10, 3], [11, 4], [12, 5], [13, 6], [14, 7], [15, 9], [16, 11]]}
+      }
+    }, {
+      "id": "side_road_2_overpass",
+      "source-layer": "road_overpass",
+      "source": "eesti",
+      "shape": "est/sillad_viaduktid:korvalmnt2_viadukt_maal; est/teed_1:korvalmnt2_viadukt_linnas",
+      "type": "line",
+      "filter": ["in", "type_id", 504, 604],
+      "paint": {
+        "line-color": [
+          "case",
+          ["all", ["==", ["get", "type_id"], 504], ["<", ["get", "a_type"], 341]], "rgb(140, 140, 130)",
+          ["all", ["==", ["get", "type_id"], 504], [">", ["get", "a_type"], 341]], "rgb(110, 110, 100)",
+          ["==", ["get", "type_id"], 604], "#786b5e",
+          "rgb(110, 110, 100)"
+        ],
+        "line-width": {"stops": [[9, 3], [10, 4], [11, 5], [12, 6], [13, 7], [14, 8], [15, 9], [16, 10]]}
+      }
+    }, {
+      "id": "side_road_2_overpass_midline",
+      "source-layer": "road_overpass",
+      "source": "eesti",
+      "shape": "est/sillad_viaduktid:korvalmnt2_viadukt_maal; est/teed_1:korvalmnt2_viadukt_linnas",
+      "type": "line",
+      "filter": ["in", "type_id", 504, 604],
+      "paint": {
+        "line-color": [
+          "case",
+          ["all", ["==", ["get", "type_id"], 504], ["<", ["get", "a_type"], 341]], "rgb(247, 227, 145)",
+          ["all", ["==", ["get", "type_id"], 504], [">", ["get", "a_type"], 341]], "rgb(250, 250, 240)",
+          ["==", ["get", "type_id"], 604], "#f49e38",
+          "rgb(247, 227, 145)"
+        ],
+        "line-width": {"stops": [[9, 2], [10, 3], [11, 4], [12, 5], [13, 6], [14, 7], [15, 8], [16, 9]]}
+      }
+    }, {
+      "id": "side_road_1_overpass",
+      "source-layer": "road_overpass",
+      "source": "eesti",
+      "shape": "est/sillad_viaduktid:korvalmnt1_viadukt_maal; est/teed_1:korvalmnt1_viadukt_linnas",
+      "type": "line",
+      "filter": ["in", "type_id", 304, 404],
+      "paint": {
+        "line-color": [
+          "case",
+          ["all", ["==", ["get", "country"], "ee"], ["<", ["get", "a_type"], 341]], "rgb(140, 140, 130)",
+          ["all", ["==", ["get", "country"], "ee"], [">", ["get", "a_type"], 341]], "rgb(110, 110, 100)",
+          "rgb(110, 110, 100)"
+        ],
+        "line-width": {"stops": [[8, 3], [9, 4], [10, 5], [11, 6], [12, 7], [13, 8], [14, 9], [15, 10], [16, 11]]}
+      }
+    }, {
+      "id": "side_road_1_overpass_midline",
+      "source-layer": "road_overpass",
+      "source": "eesti",
+      "shape": "est/sillad_viaduktid:korvalmnt1_viadukt_maal; est/teed_1:korvalmnt1_viadukt_linnas",
+      "type": "line",
+      "filter": ["in", "type_id", 304, 404],
+      "paint": {
+        "line-color": [
+          "case",
+          ["all", ["==", ["get", "country"], "ee"], ["<", ["get", "a_type"], 341]], "rgb(247, 227, 145)",
+          ["all", ["==", ["get", "country"], "ee"], [">", ["get", "a_type"], 341]], "rgb(250, 250, 240)",
+          "rgb(250, 250, 240)"
+        ],
+        "line-width": {"stops": [[8, 2], [9, 3], [10, 4], [11, 5], [12, 6], [13, 7], [14, 8], [15, 9], [16, 11]]}
+      }
+    }, {
+      "id": "side_road_overpass",
+      "source-layer": "road_overpass",
+      "source": "eesti",
+      "shape": "est/sillad_viaduktid:tugitee_viadukt",
+      "type": "line",
+      "filter": ["in", "type_id", 203, 303, 403, 503],
+      "paint": {
+        "line-color": {"stops": [[6, "rgb(218, 143, 81)"], [7, "rgb(160, 160, 150)"], [8, "rgb(150, 150, 140)"], [9, "rgb(140, 140, 130)"]]},
+        "line-width": {"stops": [[6, 1], [7, 3], [8, 4], [9, 5], [10, 6], [11, 7], [12, 8], [13, 9], [14, 10], [15, 11], [16, 12]]}
+      }
+    }, {
+      "id": "side_road_overpas_midline",
+      "source-layer": "road_overpass",
+      "source": "eesti",
+      "shape": "est/sillad_viaduktid:tugitee_viadukt",
+      "type": "line",
+      "filter": ["in", "type_id", 203, 303, 403, 503],
+      "paint": {
+        "line-color": "rgb(247, 227, 145)",
+        "line-width": {"stops": [[6, 0], [7, 2], [8, 3], [9, 4], [10, 5], [11, 6], [12, 7], [13, 8], [14, 9], [15, 10], [16, 11]]}
+      }
+    }, {
+      "id": "main_road_overpass",
+      "source-layer": "road_overpass",
+      "source": "eesti",
+      "shape": "est/sillad_viaduktid:pohitee_viadukt;",
+      "type": "line",
+      "filter": ["in", "type_id", 201, 202, 302, 402, 502],
+      "paint": {
+        "line-color": {"stops": [[5, "rgb(218, 143, 81)"], [6, "rgb(160, 160, 150)"], [7, "rgb(150, 150, 140)"], [8, "rgb(140, 140, 130)"]]},
+        "line-width": {"stops": [[5, 1], [6, 3], [7, 4], [8, 5], [9, 6], [10, 7], [11, 8], [12, 9], [13, 10], [14, 11], [15, 12], [16, 13]]}
+      }
+    }, {
+      "id": "main_road_overpass_midline",
+      "source-layer": "road_overpass",
+      "source": "eesti",
+      "shape": "est/sillad_viaduktid:pohitee_viadukt;",
+      "type": "line",
+      "filter": ["in", "type_id", 201, 202, 302, 402, 502],
+      "paint": {
+        "line-color": "rgb(227, 187, 125)",
+        "line-width": {"stops": [[5, 0], [6, 2], [7, 3], [8, 4], [9, 5], [10, 6], [11, 7], [12, 8], [13, 9], [14, 10], [15, 11], [16, 12]]}
+      }
+    }, {
+      "id": "highway_overpass",
+      "source-layer": "road_overpass",
+      "source": "eesti",
+      "shape": "est/sillad_viaduktid:kiirkiirtee_viadukttee",
+      "type": "line",
+      "filter": ["all", ["in", "type_id", 201, 202, 302, 402, 502], ["==", "special_type", 5], [">", "a_type", 340]],
+      "paint": {
+        "line-color": {"stops": [[6, "rgb(170, 125, 60)"], [7, "rgb(150, 85, 10)"]]},
+        "line-width": {"stops": [[5, 0], [6, 4], [7, 6], [8, 7], [9, 8], [10, 9], [11, 10], [12, 11], [13, 12], [14, 13], [15, 14], [16, 16]]}
+      },
+      "layout": {
+        "line-cap": "butt",
+        "line-join": "round"
+      }
+    }, {
+      "id": "highway_overpass_midline",
+      "source-layer": "road_overpass",
+      "source": "eesti",
+      "shape": "est/sillad_viaduktid:kiirkiirtee_viadukttee",
+      "type": "line",
+      "filter": ["all", ["in", "type_id", 201, 202, 302, 402, 502], ["==", "special_type", 5], [">", "a_type", 340]],
+      "paint": {
+        "line-color": "rgb(227, 187, 125)",
+        "line-width": {"stops": [[5, 0], [6, 2], [7, 3], [8, 4], [9, 5], [10, 6], [11, 7], [12, 8], [13, 9], [14, 10], [15, 11], [16, 12]]}
+      },
+      "layout": {
+        "line-cap": "butt",
+        "line-join": "round"
+      }
+    }, {
+      "id": "driving_direction",
+      "source-layer": "road_feature",
+      "source": "eesti",
+      "shape": "est/teesuund:suunad",
+      "type": "line",
+      "filter": ["==", "type", "driving_direction"],
+      "paint": {
+        "line-pattern": "suund3",
+        "line-width": 6
+      }
+    }, {
+      "id": "district_border",
+      "source-layer": "admin_boundary",
+      "source": "eesti",
+      "shape": "est/l_osa_piir:l_osa_piir",
+      "type": "line",
+      "filter": ["==", "type", "district"],
+      "paint": {
+        "line-color": "rgb(202, 82, 105)",
+        "line-width": 1,
+        "line-dasharray": {"stops": [[11, [6, 4]], [16, [8, 6]]]}
+      }
+    }, {
+      "id": "old_town_tower",
+      "source-layer": "old_town",
+      "source": "eesti",
+      "shape": "est/vanalinna_torn:vanalinna_tornid",
+      "type": "fill",
+      "filter": ["==", "type", "tower"],
+      "paint": {
+        "fill-color": "rgb(153, 102, 51)",
+        "fill-opacity": 0.6
+      }
+    }, {
+      "id": "old_town_wall",
+      "source-layer": "old_town",
+      "source": "eesti",
+      "shape": "est/myyr:vanalinna_myyr",
+      "type": "line",
+      "filter": ["==", "type", "wall"],
+      "paint": {
+        "line-color": "rgb(153, 102, 51)",
+        "line-opacity": 0.85,
+        "line-width": {"stops": [[13, 1], [14, 2], [15, 3], [16, 4]]}
+      }
+    }, {
+      "id": "landcover_forest_park_label",
+      "source-layer": "landcover_wood",
+      "source": "eesti",
+      "shape": "est/mets:mets_park",
+      "type": "symbol",
+      "filter": ["all", ["in", "type_id", 3, 5, 7], ["!=", "label", ""]],
+      "paint": {
+        "text-color": "rgb(60, 80, 60)",
+        "text-halo-color": "rgb(212, 222, 190)",
+        "text-halo-width": 1,
+        "text-opacity":  {"stops": [[13, 0], [14, 1]]}
+      },
+      "layout": {
+       "symbol-placement": "point",
+        "text-field": "{label}",
+        "text-font": ["verdanai"],
+        "text-size": {"stops": [[15, 11], [16, 12]]}
+      }
+    }, {
+      "id": "waterbody_river_label",
+      "source-layer": "waterbody_river",
+      "source": "eesti",
+      "shape": "est/vetevork_joon:vetevork_joon",
+      "type": "symbol",
+      "filter": ["all", ["!=", "disp_class", 0], ["!=", "label", ""], ["==", "$type", "LineString"]],
+      "paint": {
+        "text-color": "rgb(34, 68, 109)",
+        "text-halo-color": "rgb(249, 248, 240)",
+        "text-halo-width": 1
+      },
+      "layout": {
+       "symbol-placement": "line",
+        "text-field": "{label}",
+        "text-font": ["cambriaz"],
+        "text-size": [
+          "interpolate", ["linear"], ["zoom"],
+          10, 0,
+          11, [
+            "case",
+              ["==", ["get", "disp_class"], 1], 12,
+              ["==", ["get", "disp_class"], 2], 11,
+              0
+            ],
+          12, [
+            "case",
+              ["==", ["get", "disp_class"], 1], 12,
+              ["==", ["get", "disp_class"], 2], 12,
+              ["==", ["get", "disp_class"], 3], 11,
+              ["==", ["get", "disp_class"], 4], 11,
+              ["==", ["get", "disp_class"], 5], 11,
+              0
+            ],
+          13, [
+            "case",
+              ["==", ["get", "disp_class"], 1], 12,
+              ["==", ["get", "disp_class"], 2], 12,
+              ["==", ["get", "disp_class"], 3], 11,
+              ["==", ["get", "disp_class"], 4], 11,
+              ["==", ["get", "disp_class"], 5], 11,
+              0
+            ],
+          14, [
+            "case",
+              ["==", ["get", "disp_class"], 1], 13,
+              ["==", ["get", "disp_class"], 2], 12,
+              ["==", ["get", "disp_class"], 3], 12,
+              ["==", ["get", "disp_class"], 4], 12,
+              ["==", ["get", "disp_class"], 5], 12,
+              ["==", ["get", "disp_class"], 6], 11,
+              11
+            ]
+        ],
+        "text-optional": true,
+        "symbol-avoid-edges": true
+      }
+    }, {
+      "id": "waterbody_lake_label",
+      "source-layer": "waterbody_lake",
+      "source": "eesti",
+      "shape": "est/jarv:jarv; jarv_valis.shp:jarv_v2lis; est/vetevork_ala:vetevork_ala",
+      "minzoom": 6,
+      "type": "symbol",
+      "paint": {
+        "text-color": "rgb(34, 68, 109)",
+        "text-halo-color": "rgb(245, 245, 240)",
+        "text-halo-width": {"stops": [[9, 0], [10, 1]]}
+      },
+      "layout": {
+       "symbol-placement": "point",
+        "text-field": "{label}",
+        "text-font": ["cambriaz"],
+        "text-size": [
+          "interpolate", ["linear"], ["zoom"],
+          6,  ["case", [">=", ["get", "shape_area"], 700000000], 12, 0],
+          7,  ["case", [">=", ["get", "shape_area"], 200000000], 12, 0],
+          8,  ["case", [">=", ["get", "shape_area"], 145000000], 13, 0],
+          9,  ["case", [">=", ["get", "shape_area"], 50000000], 13, 0],
+          10, ["case", [">=", ["get", "shape_area"], 5000000], 13, 0],
+          11, ["case", [">=", ["get", "shape_area"], 1500000], 13, 0],
+          12, ["case", [">=", ["get", "shape_area"], 750000], 13, 0],
+          13, ["case", [">=", ["get", "shape_area"], 50000], 13, 0],
+          14, ["case", [">=", ["get", "shape_area"], 1000], 13, 0],
+          15, 13
+        ],
+        "text-max-width": {"stops": [[8, 4], [9, 5]]}
+      }
+    }, {
+      "id": "building_point",
+      "source-layer": "building",
+      "source": "eesti",
+      "type": "symbol",
+      "shape": "est/talud_p:talud",
+      "filter": ["==", "$type", "Point"],
+      "layout": {
+        "visibility": "none",
+        "icon-image": [
+          "case",
+          ["==", ["get", "type_id"], 14], "square2",
+          ["==", ["get", "type_id"], 15], "square2",
+          ["==", ["get", "type_id"], 16], "square2",
+          "square"
+        ],
+        "icon-rotate": ["get", "angle"],
+        "icon-rotation-alignment": "map",
+        "icon-size": {
+          "stops": [[11, 0.5], [14, 0.75]]
+        }
+      }
+    }, {
+      "id": "building_label",
+      "source-layer": "building",
+      "source": "eesti",
+      "shape": "est/majanr:majanr",
+      "type": "symbol",
+      "filter": ["all", ["!=", "label", ""], ["==", "$type", "Point"]],
+      "paint": {
+        "text-color": "rgb(0, 0, 0)",
+        "text-halo-color": "rgb(249, 248, 240)",
+        "text-halo-width": 1
+      },
+      "layout": {
+        "symbol-placement": "point",
+        "text-field": "{label}",
+        "text-font": ["verdana"],
+        "text-size": {"stops": [[16, 10], [17, 11]]},
+        "text-rotation-alignment": "map",
+        "text-rotate": ["*", -1, ["get", "angle"]]
+      }
+    }, {
+      "id": "capital_label",
+      "source-layer": "settlement",
+      "source": "eesti",
+      "shape": "valis/pealinn:linnad_pealinn; est/kohanimi_500:linnad",
+      "type": "symbol",
+      "filter": ["==", "type", "capital"],
+      "paint": {
+        "text-color": "rgb(0, 0, 0)",
+        "text-halo-color": "rgb(249, 248, 240)",
+        "text-halo-width": 1,
+        "icon-opacity": {"stops": [[8, 1], [9, 0]]}
+      },
+      "layout": {
+        "text-field": "{label}",
+        "symbol-placement": "point",
+        "text-font": ["verdanab"],
+        "text-size": [
+          "step", ["zoom"],
+          ["case", ["==", ["get", "country"], "ee"], 13, 12],
+          6,
+          ["case", ["==", ["get", "country"], "ee"], 14, 13],
+          8,
+          ["case", ["==", ["get", "country"], "ee"], 16, 15],
+          9,
+          ["case", ["==", ["get", "country"], "ee"], 17, 17]
+        ],
+        "text-offset":[0, -0.8],
+        "icon-image": {"stops": [[6, "fillcircle_7_red"], [7, "fillcircle_8_red"], [8, "fillcircle_8_red"], [9, ""]]}
+      }
+    }, {
+      "id": "road_nr_label",
+      "source-layer": "road",
+      "source": "eesti",
+      "shape": "est/teed_1:teenr_tugitee; est/teed_1:teenr_pohitee",
+      "type": "symbol",
+      "filter": [
+        "all",
+        [
+          "any",
+          ["==", ["get", "type_id"], 203],
+          ["==", ["get", "type_id"], 303],
+          ["==", ["get", "type_id"], 403],
+          ["==", ["get", "type_id"], 503],
+          ["==", ["get", "type_id"], 201],
+          ["==", ["get", "type_id"], 202],
+          ["==", ["get", "type_id"], 302],
+          ["==", ["get", "type_id"], 402],
+          ["==", ["get", "type_id"], 502]
+        ],
+        [">", ["get", "a_type"], 340],
+        ["!=", ["to-string", ["get", "nr"]], ""],
+        ["<", ["length", ["to-string", ["get", "nr"]]], 4]
+      ],
+      "paint": {
+        "text-color": "rgb(55, 55, 55)"
+      },
+      "layout": {
+        "symbol-placement": "line",
+        "text-field": "{nr}",
+        "text-font": ["verdanab"],
+        "text-size": {"stops": [[9, 0], [10, 9]]},
+        "text-offset": [0, 0.075],
+        "text-rotation-alignment": "viewport",
+        "icon-rotation-alignment": "viewport",
+        "icon-image": [
+          "case",
+          ["==", ["length", ["get", "nr"]], 1], "tnr_1",
+          ["==", ["length", ["get", "nr"]], 2], "tnr_2",
+          ["==", ["length", ["get", "nr"]], 3], "tnr_3",
+          ["==", ["length", ["get", "nr"]], 4], "tnr_4",
+          ""
+        ],
+        "icon-size": {"stops": [[9, 0], [10, 1]]}
+      }
+    }, {
+      "id": "road_e_nr_label",
+      "source-layer": "road",
+      "source": "eesti",
+      "shape": "est/teed_1:E_teenr_pohitee",
+      "type": "symbol",
+      "filter": [
+        "all",
+        [
+          "any",
+          ["==", ["get", "type_id"], 201],
+          ["==", ["get", "type_id"], 202],
+          ["==", ["get", "type_id"], 302],
+          ["==", ["get", "type_id"], 402],
+          ["==", ["get", "type_id"], 502]
+        ],
+        [">", ["get", "a_type"], 340],
+        ["!=", ["to-string", ["get", "e_nr"]], ""]
+      ],
+      "paint": {
+        "text-color": "rgb(255, 255, 255)"
+      },
+      "layout": {
+        "symbol-placement": "line",
+        "text-field": "{e_nr}",
+        "text-font": ["verdanab"],
+        "text-size": {"stops": [[9, 0], [10, 9]]},
+        "text-offset": [0, 0.075],
+        "text-rotation-alignment": "viewport",
+        "icon-rotation-alignment": "viewport",
+        "icon-image": [
+          "case",
+          ["==", ["length", ["get", "e_nr"]], 1], "e_nr_1",
+          ["==", ["length", ["get", "e_nr"]], 2], "e_nr_2",
+          ["==", ["length", ["get", "e_nr"]], 3], "e_nr_3",
+          ["==", ["length", ["get", "e_nr"]], 4], "e_nr_4",
+          ""
+        ],
+        "icon-size": {"stops": [[9, 0], [10, 1]]}
+      }
+    }, {
+      "id": "square_label",
+      "source-layer": "landcover_field",
+      "source": "eesti",
+      "shape": "est/l_plats_nimi_p:l_plats_nimi",
+      "type": "symbol",
+      "filter": ["all", ["==", "type_id", 0], ["==", "$type", "Point"]],
+      "paint": {
+        "text-color": "rgb(0, 0, 0)",
+        "text-opacity": {"stops": [[12, 0], [13, 1]]}
+      },
+      "layout": {
+        "symbol-placement": "point",
+        "text-field": "{label}",
+        "text-font": ["verdanai"],
+        "text-size": {"stops": [[14, 0], [15, 11], [16, 13]]}
+      }
+    }, {
+      "id": "cemetery_label",
+      "source-layer": "landcover_field",
+      "source": "eesti",
+      "shape": "est/kalmistu:kalmistud",
+      "type": "symbol",
+      "filter": ["==", "type_id", 9],
+      "paint": {
+        "text-color": "rgb(60, 80, 60)",
+        "text-halo-color": "rgb(212, 222, 190)",
+        "text-halo-width": 3,
+        "text-opacity": {"stops": [[13, 0], [14, 1]]}
+      },
+      "layout": {
+        "symbol-placement": "point",
+        "text-field": "{label}",
+        "text-font": ["verdanai"],
+        "text-size": {"stops": [[13, 0], [14, 11], [15, 12], [16, 13]]}
+      }
+    }, {
+      "id": "walkway_label",
+      "source-layer": "road",
+      "source": "eesti",
+      "shape": "est/teed_3:tn_jalgtee",
+      "type": "symbol",
+      "filter": ["all", ["in", "type_id", 914, 915, 916, 917], ["!=", "label", ""]],
+      "paint": {
+        "text-color": "rgb(0, 0, 0)",
+        "text-halo-color": "rgb(232, 232, 222)",
+        "text-halo-width": 1,
+        "text-opacity": {"stops": [[15, 0], [16, 1]]}
+      },
+      "layout": {
+        "symbol-placement": "line",
+        "text-field": "{label}",
+        "text-font": ["arial"],
+        "text-size": {"stops": [[15, 0], [16, 12]]}
+      }
+    }, {
+      "id": "local_road_3_4_label",
+      "source-layer": "road",
+      "source": "eesti",
+      "shape": "est/teed_2:kohalik_tee3_4",
+      "type": "symbol",
+      "filter": ["all", ["==", "type_id", 811], ["!=", "label", ""]],
+      "paint": {
+        "text-color": "rgb(0, 0, 0)",
+        "text-halo-color": "rgb(232, 232, 222)",
+        "text-halo-width": 1,
+        "text-opacity": {"stops": [[14, 0], [15, 1]]}
+      },
+      "layout": {
+        "symbol-placement": "line",
+        "text-field": "{label}",
+        "text-font": ["arial"],
+        "text-size": {"stops": [[14, 0], [15, 12], [16, 13]]}
+      }
+    }, {
+      "id": "local_road_2_label",
+      "source-layer": "road",
+      "source": "eesti",
+      "shape": "est/teed_2:kohalik_tee2;",
+      "type": "symbol",
+      "filter": ["all", ["==", "type_id", 808], ["!=", "label", ""]],
+      "paint": {
+        "text-color": "rgb(0, 0, 0)",
+        "text-halo-color": "rgb(232, 232, 222)",
+        "text-halo-width": 1,
+        "text-opacity": {"stops": [[12, 0], [13, 1]]}
+      },
+      "layout": {
+        "symbol-placement": "line",
+        "text-field": "{label}",
+        "text-font": ["arial"],
+        "text-size": {"stops": [[12, 0], [13, 11], [14, 12], [16, 13], [16, 14]]}
+      }
+    }, {
+      "id": "local_road_1_label",
+      "source-layer": "road",
+      "source": "eesti",
+      "shape": "est/teed_1:kohalik_tee1;",
+      "type": "symbol",
+      "filter": ["all", ["==", "type_id", 606], ["!=", "label", ""]],
+      "paint": {
+        "text-color": "rgb(0, 0, 0)",
+        "text-halo-color": "rgb(232, 232, 222)",
+        "text-halo-width": 1,
+        "text-opacity": {"stops": [[12, 0], [13, 1]]}
+      },
+      "layout": {
+        "symbol-placement": "line",
+        "text-field": "{label}",
+        "text-font": ["arial"],
+        "text-size": {"stops": [[12, 0], [13, 12], [14, 13], [15, 14], [16, 15]]}
+      }
+    }, {
+      "id": "street_entrance_label",
+      "source-layer": "road",
+      "source": "eesti",
+      "shape": "est/teed_3:tn_sissesoit",
+      "type": "symbol",
+      "filter": ["all", ["==", "type_id", 813], ["!=", "label", ""]],
+      "paint": {
+        "text-color": "rgb(0, 0, 0)",
+        "text-halo-color": "rgb(232, 232, 222)",
+        "text-halo-width": 1,
+        "text-opacity": {"stops": [[13, 0], [14, 1]]}
+      },
+      "layout": {
+        "symbol-placement": "line",
+        "text-field": "{label}",
+        "text-font": ["arial"],
+        "text-size": {"stops": [[13, 0], [14, 11], [15, 12], [16, 13]]}
+      }
+    }, {
+      "id": "street_between_buidlings_label",
+      "source-layer": "road",
+      "source": "eesti",
+      "shape": "est/teed_3:tn_sissesoit",
+      "type": "symbol",
+      "filter": ["all", ["==", "type_id", 812], ["!=", "label", ""]],
+      "paint": {
+        "text-color": "rgb(0, 0, 0)",
+        "text-halo-color": "rgb(232, 232, 222)",
+        "text-halo-width": 1,
+        "text-opacity": {"stops": [[13, 0], [14, 1]]}
+      },
+      "layout": {
+        "symbol-placement": "line",
+        "text-field": "{label}",
+        "text-font": ["arial"],
+        "text-size": {"stops": [[13, 0], [14, 11], [15, 12], [16, 13]]}
+      }
+    }, {
+      "id": "small_street_1_2_label",
+      "source-layer": "road",
+      "source": "eesti",
+      "shape": "est/teed_2:vaiketn1_2",
+      "type": "symbol",
+      "filter": ["all", ["in", "type_id", 809, 810], ["!=", "label", ""]],
+      "paint": {
+        "text-color": "rgb(0, 0, 0)",
+        "text-halo-color": "rgb(232, 232, 222)",
+        "text-halo-width": 1,
+        "text-opacity": {"stops": [[12, 0], [13, 1]]}
+      },
+      "layout": {
+        "symbol-placement": "line",
+        "text-field": "{label}",
+        "text-font": ["arial"],
+        "text-size": {"stops": [[12, 0], [13, 11], [14, 12], [15, 13], [16, 14]]}
+      }
+    }, {
+      "id": "side_street_label",
+      "source-layer": "road",
+      "source": "eesti",
+      "shape": "est/teed_1:korvaltn",
+      "type": "symbol",
+      "filter": ["all", ["==", "type_id", 707], ["!=", "label", ""]],
+      "minzoom": 10,
+      "paint": {
+        "text-color": "rgb(0, 0, 0)",
+        "text-halo-color": "rgb(232, 232, 222)",
+        "text-halo-width": 1,
+        "text-opacity": {"stops": [[10, 0], [11, 1]]}
+      },
+      "layout": {
+        "symbol-placement": "line",
+        "text-field": "{label}",
+        "text-font": {"stops": [[13, ["arial"]], [14, ["arialb"]]]},
+        "text-size": {"stops": [[10, 0], [11, 11], [12, 11], [13, 11.5], [14, 11], [15, 13], [16, 14]]}
+      }
+    }, {
+      "id": "main_street_label",
+      "source-layer": "road",
+      "source": "eesti",
+      "shape": "est/teed_1:peatanav_maal; est/teed_1:peatanav_linnas",
+      "type": "symbol",
+      "filter": ["all", ["in", "type_id", 305, 405, 505], ["!=", "label", ""]],
+      "paint": {
+        "text-color": "rgb(0, 0, 0)",
+        "text-halo-color": "rgb(232, 232, 222)",
+        "text-halo-width": 1,
+        "text-opacity": {"stops": [[9, 0], [10, 1]]}
+      },
+      "layout": {
+        "symbol-placement": "line",
+        "text-field": "{label}",
+        "text-font": ["arialb"],
+        "text-size": {"stops": [[9, 0], [10, 11], [11, 11], [12, 12], [13, 12], [14, 13], [15, 13], [16, 14]]}
+      }
+    }, {
+      "id": "side_road_2_label",
+      "source-layer": "road",
+      "source": "eesti",
+      "shape": "est/teed_1:korvalmnt2_maal; est/teed_1:korvalmnt2_linnas",
+      "type": "symbol",
+      "filter": ["all", ["in", "type_id", 504, 604], ["!=", "label", ""]],
+      "paint": {
+        "text-color": "rgb(0, 0, 0)",
+        "text-halo-color": "rgb(232, 232, 222)",
+        "text-halo-width": 1,
+        "text-opacity": {"stops": [[11, 0], [12, 1]]}
+      },
+      "layout": {
+        "symbol-placement": "line",
+        "text-field": "{label}",
+        "text-font": ["arialb"],
+        "text-size": {"stops": [[11, 0], [12, 12], [13, 12], [14, 13], [15, 13], [16, 14]]}
+      }
+    }, {
+      "id": "side_road_1_label",
+      "source-layer": "road",
+      "source": "eesti",
+      "shape": "est/teed_1:korvalmnt1_maal; est/teed_1:korvalmnt1_linnas; korvalmnt1_valis.shp:korvalmnt1_valis",
+      "type": "symbol",
+      "filter": ["all", ["in", "type_id", 304, 404], ["!=", "label", ""]],
+      "paint": {
+        "text-color": "rgb(0, 0, 0)",
+        "text-halo-color": "rgb(232, 232, 222)",
+        "text-halo-width": 1,
+        "text-opacity": {"stops": [[10, 0], [11, 1]]}
+      },
+      "layout": {
+        "symbol-placement": "line",
+        "text-field": "{label}",
+        "text-font": ["arialb"],
+        "text-size": {"stops": [[10, 0], [11, 11], [12, 12], [13, 12], [14, 13], [15, 13], [16, 14]]}
+      }
+    }, {
+      "id": "side_road_label",
+      "source-layer": "road",
+      "source": "eesti",
+      "shape": "est/teed_1:tugiteed; tugiteed_valis.shp:tugiteed_valis",
+      "type": "symbol",
+      "filter": ["in", "type_id", 203, 303, 403, 503],
+      "paint": {
+        "text-color": "rgb(0, 0, 0)",
+        "text-halo-color": "rgb(232, 232, 222)",
+        "text-halo-width": 1,
+        "text-opacity": {"stops": [[9, 0], [10, 1]]}
+      },
+      "layout": {
+        "symbol-placement": "line",
+        "text-field": "{label}",
+        "text-font": ["arialb"],
+        "text-size": {"stops": [[9, 0], [10, 10], [11, 11], [12, 12], [13, 12], [14, 13], [15, 13], [16, 14]]}
+      }
+    }, {
+      "id": "main_road_label",
+      "source-layer": "road",
+      "source": "eesti",
+      "shape": "est/teed_1:pohiteed; pohiteed_valis.shp:pohiteed_valis",
+      "type": "symbol",
+      "filter": ["in", "type_id", 201, 202, 302, 402, 502],
+      "paint": {
+        "text-color": "rgb(0, 0, 0)",
+        "text-halo-color": "rgb(232, 232, 222)",
+        "text-halo-width": 1,
+        "text-opacity": {"stops": [[9, 0], [10, 1]]}
+      },
+      "layout": {
+        "symbol-placement": "line",
+        "text-field": "{label}",
+        "text-font": ["arialb"],
+        "text-size": {"stops": [[9, 0], [10, 11], [11, 12], [12, 13], [13, 13], [14, 14], [15, 14], [16, 15]]}
+      }
+    }, {
+      "id": "planned_road_label",
+      "source-layer": "road",
+      "source": "eesti",
+      "shape": "est/teed_3:tee_planeeritav",
+      "type": "symbol",
+      "filter": ["==", "type_id", 999],
+      "paint": {
+        "text-color": "rgb(170, 170, 150)",
+        "text-halo-color": "rgb(232, 232, 222)",
+        "text-halo-width": 1,
+        "text-opacity": {"stops": [[14, 0], [15, 1]]}
+      },
+      "layout": {
+        "symbol-placement": "line",
+        "text-field": "{label}",
+        "text-font": ["arial"],
+        "text-size": {"stops": [[14, 0], [15, 13]]}
+      }
+    }, {
+      "id": "waterbody_label",
+      "source-layer": "waterbody_label",
+      "source": "eesti",
+      "shape": "est/merenimed:merenimed",
+      "type": "symbol",
+      "paint": {
+        "text-color": "rgb(52, 78, 120)"
+      },
+      "layout": {
+        "symbol-placement": "point",
+        "text-field": "{label}",
+        "text-font": ["cambriaz"],
+        "text-size": [
+          "interpolate", ["linear"], ["zoom"],
+          6, [
+            "case",
+            ["==", ["get", "type_id"], 1], 12,
+            0
+          ],
+          8, [
+            "case",
+            ["==", ["get", "type_id"], 1], 13,
+            ["==", ["get", "type_id"], 2], 12,
+            ["==", ["get", "type_id"], 3], 11,
+            0
+          ],
+          9, [
+            "case",
+            ["==", ["get", "type_id"], 1], 14,
+            ["==", ["get", "type_id"], 2], 13,
+            ["==", ["get", "type_id"], 3], 11,
+            0
+          ],
+          10, [
+            "case",
+            ["==", ["get", "type_id"], 1], 14,
+            ["==", ["get", "type_id"], 2], 14,
+            ["==", ["get", "type_id"], 3], 11,
+            11
+          ],
+          11, [
+            "case",
+            ["==", ["get", "type_id"], 1], 14,
+            ["==", ["get", "type_id"], 2], 14,
+            ["==", ["get", "type_id"], 3], 12,
+            12
+          ]
+        ]
+      }
+    }, {
+      "id": "country_label",
+      "source-layer": "settlement",
+      "source": "eesti",
+      "shape": "valis/riigid:riigi_nimi",
+      "type": "symbol",
+      "filter": ["==", "type", "country"],
+      "paint": {
+        "text-color": "rgb(250, 250, 245)",
+        "text-halo-color": "rgb(180, 180, 150)",
+        "text-halo-width": 1
+      },
+      "layout": {
+        "text-field": "{label}",
+        "text-font": ["arialb"],
+        "text-size": ["interpolate", ["linear"], ["zoom"], 2, 10, 6, 20],
+        "text-rotation-alignment": "viewport",
+        "symbol-placement": "point"
+      }
+    }, {
+      "id": "county_label",
+      "source-layer": "settlement",
+      "source": "eesti",
+      "shape": "est/maakonnad:maakonna_nimi",
+      "type": "symbol",
+      "filter": ["==", "type", "county"],
+      "paint": {
+        "text-color": "rgb(202, 85, 105)",
+        "text-halo-color": "rgb(249, 248, 240)",
+        "text-halo-width": 1,
+        "text-opacity": {"stops": [[6, 0.7], [7, 1]]}
+      },
+      "layout": {
+        "text-field": "{label}",
+        "symbol-placement": "point",
+        "text-font": ["verdanaz"],
+        "text-rotation-alignment": "viewport",
+        "text-max-width": 12,
+        "text-size": {"stops": [[6, 9], [7, 11], [9, 12]]}
+      }
+    }, {
+      "id": "municipality_label",
+      "source-layer": "settlement",
+      "source": "eesti",
+      "shape": "est/vallad.shp:valla_nimi",
+      "type": "symbol",
+      "filter": ["==", "type", "municipality"],
+      "paint": {
+        "text-color": "rgb(202, 85, 105)",
+        "text-halo-color": "rgb(249, 248, 240)",
+        "text-halo-width": 1
+      },
+      "layout": {
+        "text-field": "{label}",
+        "symbol-placement": "point",
+        "text-font": ["verdanaz"],
+        "text-rotation-alignment": "viewport",
+        "text-size": {"stops": [[10, 11], [11, 12]]}
+      }
+    }, {
+      "id": "district_label",
+      "source-layer": "settlement",
+      "source": "eesti",
+      "shape": "est/kohanimi_500:l_osa_nim",
+      "type": "symbol",
+      "filter": ["==", "type", "district"],
+      "paint": {
+        "text-color": "rgb(0, 0, 0)",
+        "text-halo-color": "rgb(249, 248, 240)",
+        "text-halo-width": 1
+      },
+      "layout": {
+        "text-field": "{label}",
+        "text-font": ["arial"],
+        "text-size": {"stops": [[11, 13], [12, 14], [13, 15]]},
+        "text-rotation-alignment": "viewport",
+        "symbol-placement": "point"
+      }
+    }, {
+      "id": "village_label",
+      "source-layer": "settlement",
+      "source": "eesti",
+      "shape": "est/kohanimi_500:kylad; est/hajaasust_yxus:asust_yxus_kyla",
+      "type": "symbol",
+      "filter": ["==", "type", "village"],
+      "minzoom": 8,
+      "paint": {
+        "text-color": {"stops": [[13, "rgb(0, 0, 0)"], [14, "rgb(60, 60, 60)"], [15, "rgb(80, 80, 80)"]]},
+        "text-halo-color": "rgb(249, 248, 240)",
+        "text-halo-width": 1,
+        "icon-opacity": {"stops": [[10, 1], [11, 0]]}
+      },
+      "layout": {
+        "text-field": "{label}",
+        "text-font": ["ariali"],
+        "text-anchor": "bottom",
+        "symbol-placement": "point",
+        "text-rotation-alignment": "viewport",
+        "symbol-z-order": "source",
+        "text-size": [
+          "interpolate", ["linear"], ["zoom"],
+          8,  ["case", [">=", ["get", "population"], 200], 11, 0],
+          9,  ["case", [">=", ["get", "population"], 200], 12, 11],
+          10, ["case", [">=", ["get", "population"], 200], 13, 12],
+          11, ["case", [">=", ["get", "population"], 200], 14, 13],
+          13, ["case", [">=", ["get", "population"], 200], 14, 13],
+          14, ["case", [">=", ["get", "population"], 200], 16, 15],
+          15, ["case", [">=", ["get", "population"], 200], 18, 17]
+        ],
+        "text-offset": [0, -0.1],
+        "icon-image": [
+          "step", ["zoom"],
+          "fillcircle_5", 9,
+          ["case", [">=", ["get", "population"], 200], "fillcircle_6", "fillcircle_5"], 10,
+          ["case", [">=", ["get", "population"], 200], "fillcircle_6", "fillcircle_5"], 11,
+          ""
+       ]
+      }
+    }, {
+      "id": "borough_label",
+      "source-layer": "settlement",
+      "source": "eesti",
+      "shape": "est/kohanimi_500:alevid; est/hajaasust_yxus:asust_yxus_alevik; est/hajaasust_yxus:asust_yxus_alev",
+      "type": "symbol",
+      "filter": ["==", "type", "borough"],
+      "minzoom": 7,
+      "paint": {
+        "text-color": {"stops": [[13, "rgb(0, 0, 0)"], [14, "rgb(60, 60, 60)"], [15, "rgb(80, 80, 80)"]]},
+        "text-halo-color": "rgb(249, 248, 240)",
+        "text-halo-width": 1,
+        "icon-opacity": {"stops": [[9, 1], [10, 0]]}
+      },
+      "layout": {
+        "text-field": "{label}",
+        "text-font": [
+          "step", ["zoom"],
+          ["case", ["==", ["get", "type_id"], 342], ["literal", ["verdanab"]], ["literal", ["verdana"]]], 7,
+          ["case", ["==", ["get", "type_id"], 342], ["literal", ["verdanab"]], ["literal", ["verdana"]]], 8,
+          ["literal", ["verdanab"]]
+       ],
+        "text-anchor": "bottom",
+        "symbol-placement": "point",
+        "text-rotation-alignment": "viewport",
+        "symbol-z-order": "source",
+        "text-size": [
+          "interpolate", ["linear"], ["zoom"],
+          7,  11,
+          8,  ["case", ["==", ["get", "type_id"], 342], 12, 11],
+          9,  ["case", ["==", ["get", "type_id"], 342], 13, 12],
+          10, ["case", ["==", ["get", "type_id"], 342], 15, 14],
+          13, ["case", ["==", ["get", "type_id"], 342], 15, 14],
+          14, ["case", ["==", ["get", "type_id"], 342], 15, 14],
+          15, ["case", ["==", ["get", "type_id"], 342], 17, 16]
+        ],
+        "text-offset": ["case", ["==", ["get", "type_id"], 342], ["literal", [0, -0.5]], ["literal", [0, -0.3]]],
+        "icon-image": [
+          "step", ["zoom"],
+          ["case", ["==", ["get", "type_id"], 342], "fillcircle_9", "fillcircle_6"], 7,
+          ["case", ["==", ["get", "type_id"], 342], "fillcircle_9", "fillcircle_6"], 8,
+          ["case", ["==", ["get", "type_id"], 342], "fillcircle_9", "fillcircle_6"], 9,
+          ["case", ["==", ["get", "type_id"], 342], "fillcircle_9", "fillcircle_7"], 10,
+          ["case", ["==", ["get", "type_id"], 342], "fillcircle_9", "fillcircle_6"], 11,
+          ""
+       ]
+      }
+    }, {
+      "id": "island_label",
+      "source-layer": "settlement",
+      "source": "eesti",
+      "shape": "est/saarenimed:saarenimed",
+      "type": "symbol",
+      "filter": ["==", "type", "island"],
+      "paint": {
+        "text-color": "rgb(100, 60, 15)",
+        "text-halo-color": "rgb(245, 245, 240)",
+        "text-halo-width": 1
+      },
+      "layout": {
+        "text-field": "{label}",
+        "symbol-placement": "point",
+        "text-font": ["cambriaz"],
+        "text-rotation-alignment": "viewport",
+        "text-size": [
+          "interpolate", ["linear"], ["zoom"],
+          9,  [
+            "case",
+            ["==", ["get", "type_id"], 1], 13,
+            ["==", ["get", "type_id"], 2], 12,
+            11
+          ],
+          10, [
+            "case", 
+            ["==", ["get", "type_id"], 1], 13,
+            ["==", ["get", "type_id"], 2], 12,
+            12
+          ],
+          11, 12,
+          12, 12
+        ]
+      }
+    }, {
+      "id": "peninsula_label",
+      "source-layer": "settlement",
+      "source": "eesti",
+      "shape": "est/poolsaarenimed:poolsaarenimed",
+      "type": "symbol",
+      "filter": ["==", "type", "peninsula"],
+      "paint": {
+        "text-color": "rgb(100, 60, 15)",
+        "text-halo-color": "rgb(245, 245, 240)",
+        "text-halo-width": 1
+      },
+      "layout": {
+        "text-field": "{label}",
+        "symbol-placement": "point",
+        "text-font": ["cambriaz"],
+        "text-rotation-alignment": "viewport",
+        "text-size": 12
+      }
+    }, {
+      "id": "elevation_label",
+      "source-layer": "elevation",
+      "source": "eesti",
+      "shape": "est/korg_p:korguspunktid",
+      "type": "symbol",
+      "paint": {
+        "text-color": "rgb(100, 60, 15)",
+        "text-halo-color": "rgb(245, 245, 240)",
+        "text-halo-width": 1
+      },
+      "layout": {
+        "text-field": "{label}\n{elevation}",
+        "symbol-placement": "point",
+        "text-font": ["cambriaz"],
+        "text-size": {"stops": [[12, 11], [13, 12]]},
+        "text-justify": "left",
+        "text-anchor": "bottom-left",
+        "text-offset": [0.15, 0],
+        "icon-image": "fillcircle_korguspunktid"
+      }
+    }, {
+      "id": "town_label",
+      "source-layer": "settlement",
+      "source": "eesti",
+      "shape": "valis/v_linn:linnad_valis_v2ike; est/kohanimi_500:linnad",
+      "type": "symbol",
+      "filter": ["==", "type", "town"],
+      "minzoom": 7,
+      "paint": {
+        "text-color": "rgb(0, 0, 0)",
+        "text-halo-color": "rgb(249, 248, 240)",
+        "text-halo-width": 1,
+        "icon-opacity": {"stops": [[8, 1], [9, 0]]}
+      },
+      "layout": {
+        "text-field": "{label}",
+        "symbol-placement": "point",
+        "symbol-z-order": "source",
+        "text-font": {"stops": [[6, ["verdana"]], [7, ["verdanab"]]]},
+        "text-size": {"stops": [[6, 10], [7, 11], [8, 12], [9, 14], [11, 17]]},
+        "text-offset": [0, -0.8],
+        "icon-image": [
+          "step", ["zoom"],
+          [
+            "case",
+            ["==", ["get", "country"], "ee"], "fillcircle_6_red",
+            "fillcircle_5_red"
+          ],
+          7,
+          [
+            "case",
+            ["==", ["get", "country"], "ee"], "fillcircle_6_red",
+            "fillcircle_5_red"
+          ],
+          8,
+          [
+            "case",
+            ["==", ["get", "country"], "ee"], "fillcircle_7_red",
+            "fillcircle_6_red"
+          ],
+          9,
+          ""
+        ]
+      }
+    }, {
+      "id": "city_label",
+      "source-layer": "settlement",
+      "source": "eesti",
+      "shape": "valis/s_linn:linnad_v2lis_suur; est/kohanimi_500:linnad",
+      "type": "symbol",
+      "filter": ["==", "type", "city"],
+      "paint": {
+        "text-color": "rgb(0, 0, 0)",
+        "text-halo-color": "rgb(249, 248, 240)",
+        "text-halo-width": 1,
+        "icon-opacity": {"stops": [[8, 1], [9, 0]]}
+      },
+      "layout": {
+        "text-field": "{label}",
+        "symbol-placement": "point",
+        "symbol-z-order": "source",
+        "text-font": ["verdanab"],
+        "text-size": [
+          "interpolate", ["linear"], ["zoom"],
+          5, ["case", ["==", ["get", "country"], "ee"], 12, 11],
+          6, [
+            "case",
+            ["!=", ["get", "country"], "ee"], 11,
+            ["all", ["==", ["get", "country"], "ee"], [">", ["get", "population"], 40000]], 12,
+            10
+          ],
+          7, [
+            "case",
+            ["!=", ["get", "country"], "ee"], 13,
+            ["all", ["==", ["get", "country"], "ee"], [">", ["get", "population"], 40000]], 13,
+            11
+          ],
+          8, [
+            "case",
+            ["!=", ["get", "country"], "ee"], 14,
+            ["all", ["==", ["get", "country"], "ee"], [">", ["get", "population"], 40000]], 15,
+            12
+          ],
+          9, [
+            "case",
+            ["!=", ["get", "country"], "ee"], 17,
+            ["all", ["==", ["get", "country"], "ee"], [">", ["get", "population"], 40000]], 17,
+            13
+          ],
+          10, [
+            "case",
+            ["!=", ["get", "country"], "ee"], 17,
+            ["all", ["==", ["get", "country"], "ee"], [">", ["get", "population"], 40000]], 17,
+            14
+          ],
+          11, [
+            "case",
+            ["!=", ["get", "country"], "ee"], 17,
+            ["all", ["==", ["get", "country"], "ee"], [">", ["get", "population"], 40000]], 17,
+            15
+          ],
+          12, [
+            "case",
+            ["!=", ["get", "country"], "ee"], 17,
+            ["all", ["==", ["get", "country"], "ee"], [">", ["get", "population"], 40000]], 17,
+            15
+          ]
+        ],
+        "text-offset": [0, -0.8],
+        "icon-image": [
+          "step", ["zoom"],
+          [
+            "case",
+            ["!=", ["get", "country"], "ee"], "fillcircle_6_red",
+            ["all", ["==", ["get", "country"], "ee"], [">", ["get", "population"], 40000]], "fillcircle_7_red",
+            "fillcircle_5_red"
+          ],
+          6,
+          [
+            "case",
+            ["!=", ["get", "country"], "ee"], "fillcircle_6_red",
+            ["all", ["==", ["get", "country"], "ee"], [">", ["get", "population"], 40000]], "fillcircle_7_red",
+            "fillcircle_5_red"
+          ],
+          7,
+          [
+            "case",
+            ["!=", ["get", "country"], "ee"], "fillcircle_7_red",
+            ["all", ["==", ["get", "country"], "ee"], [">", ["get", "population"], 40000]], "fillcircle_8_red",
+            "fillcircle_6_red"
+          ],
+          8,
+          [
+            "case",
+            ["!=", ["get", "country"], "ee"], "fillcircle_8_red",
+            ["all", ["==", ["get", "country"], "ee"], [">", ["get", "population"], 40000]], "fillcircle_8_red",
+            "fillcircle_7_red"
+          ],
+          9,
+          ""
+        ]
+      }
+    }, {
+      "id": "building_fill_extrusion",
+      "source-layer": "building",
+      "source": "eesti",
+      "shape": "est/maja:maja",
+      "type": "fill-extrusion",
+      "filter": ["all", ["!in", "type_id", 14, 15, 16, 19], ["==", "$type", "Polygon"]],
+      "paint": {
+        "fill-extrusion-height": ["*", 2, ["get", "type_id"]],
+        "fill-extrusion-color": [
+          "case",
+          ["==", ["get", "type_id"],  1], "#8a9a71",
+          ["==", ["get", "type_id"],  2], "#8a9a71",
+          ["==", ["get", "type_id"],  3], "#8a9a71",
+          ["==", ["get", "type_id"],  4], "#8a9a71",
+          ["==", ["get", "type_id"],  5], "#8a9a71",
+          ["==", ["get", "type_id"],  6], "#8a9a71",
+          ["==", ["get", "type_id"],  7], "#8a9a71",
+          ["==", ["get", "type_id"], 17], "#8a9a71",
+          ["==", ["get", "type_id"], 30], "#8a9a71",
+          ["==", ["get", "type_id"], 49], "#8a9a71",
+          ["==", ["get", "type_id"],  8], "#8a9a71",
+          ["==", ["get", "type_id"],  9], "#8a9a71",
+          ["==", ["get", "type_id"], 10], "#8a9a71",
+          ["==", ["get", "type_id"], 11], "#8a9a71",
+          ["==", ["get", "type_id"], 12], "#8a9a71",
+          ["==", ["get", "type_id"], 13], "#8a9a71",
+          ["==", ["get", "type_id"], 20], "#8a9a71",
+          ["==", ["get", "type_id"], 37], "#8a9a71",
+          "rgba(0, 0, 0, 0)"
+        ]
+      },
+      "layout": {
+        "visibility": "none"
+      }
+    }
+    
+  ]
+}

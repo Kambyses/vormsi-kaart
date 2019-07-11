@@ -1,0 +1,635 @@
+[
+  {
+    "id": "looduskaitseala",
+    "type": "line",
+    "beforeId": "landcover_wetland",
+    "layout": {
+      "line-cap": "round",
+      "line-join": "round"
+    },
+    "paint": {
+      "line-pattern": "img/maastikukaitseala_kriips.svg",
+      "line-width": 8,
+      "line-opacity": 0.5
+    },
+    "filter": ["all", ["==", "visible", true], ["==", "style", "looduskaitseala"]]
+  },
+  {
+    "id": "metssiga",
+    "type": "symbol",
+    "layout": {
+      "icon-image": "img/metssiga.png",
+      "icon-size": {"stops": [[8, 0], [9, 0.25], [10, 0.5], [11, 0.75], [12, 1]]},
+      "icon-ignore-placement": true,
+      "icon-anchor": "bottom"
+    },
+    "filter": ["all", ["==", "visible", true], ["==", "style", "metssiga"]]
+  },
+  {
+    "id": "poder",
+    "type": "symbol",
+    "layout": {
+      "icon-image": "img/poder.png",
+      "icon-size": {"stops": [[8, 0], [9, 0.25], [10, 0.5], [11, 0.75], [12, 1]]},
+      "icon-ignore-placement": true,
+      "icon-anchor": "bottom"
+    },
+    "filter": ["all", ["==", "visible", true], ["==", "style", "poder"]]
+  },
+  {
+    "id": "kotkas",
+    "type": "symbol",
+    "layout": {
+      "icon-image": "img/kotkas.png",
+      "icon-size": {"stops": [[8, 0], [9, 0.25], [10, 0.5], [11, 0.75], [12, 1]]},
+      "icon-ignore-placement": true,
+      "icon-anchor": "bottom"
+    },
+    "filter": ["all", ["==", "visible", true], ["==", "style", "kotkas"]]
+  },
+  {
+    "id": "majakas",
+    "type": "symbol",
+    "layout": {
+      "icon-image": "img/majakas.png",
+      "icon-size": {"stops": [[8, 0], [9, 0.1], [10, 0.25], [11, 0.5], [12, 0.75], [12, 1]]},
+      "icon-offset": {"stops": [[8, [0, 0]], [9, [0, 0]], [10, [0, 0]], [11, [5, 5]], [12, [5, 5]], [13, [5, 5]], [14, [0, 0]]]},
+      "icon-ignore-placement": true,
+      "icon-anchor": "bottom"
+    },
+    "filter": ["all", ["==", "visible", true], ["==", "style", "majakas"]]
+  },
+  {
+    "id": "kajakad",
+    "type": "symbol",
+    "layout": {
+      "icon-image": "img/kajakad.png",
+      "icon-size": {"stops": [[8, 0], [9, 0.25], [10, 0.5], [11, 0.75], [12, 1]]},
+      "icon-ignore-placement": true,
+      "icon-anchor": "bottom"
+    },
+    "filter": ["all", ["==", "visible", true], ["==", "style", "kajakad"]]
+  },
+  {
+    "id": "luik",
+    "type": "symbol",
+    "layout": {
+      "icon-image": "img/luik.png",
+      "icon-size": {"stops": [[8, 0], [9, 0.25], [10, 0.5], [11, 0.75], [12, 1]]},
+      "icon-ignore-placement": true,
+      "icon-anchor": "bottom"
+    },
+    "filter": ["all", ["==", "visible", true], ["==", "style", "luik"]]
+  },
+  {
+    "id": "ilves",
+    "type": "symbol",
+    "layout": {
+      "icon-image": "img/ilves.png",
+      "icon-size": {"stops": [[8, 0], [9, 0.25], [10, 0.5], [11, 0.75], [12, 1]]},
+      "icon-ignore-placement": true,
+      "icon-anchor": "bottom"
+    },
+    "filter": ["all", ["==", "visible", true], ["==", "style", "ilves"]]
+  },
+  {
+    "id": "luik2",
+    "type": "symbol",
+    "layout": {
+      "icon-image": "img/luik2.png",
+      "icon-size": {"stops": [[8, 0], [9, 0.25], [10, 0.5], [11, 0.75], [12, 1]]},
+      "icon-ignore-placement": true,
+      "icon-anchor": "center"
+    },
+    "filter": ["all", ["==", "visible", true], ["==", "style", "luik2"]]
+  },
+  {
+    "id": "kiivitaja",
+    "type": "symbol",
+    "layout": {
+      "icon-image": "img/kiivitaja.png",
+      "icon-size": {"stops": [[8, 0], [9, 0.25], [10, 0.5], [11, 0.75], [12, 1]]},
+      "icon-ignore-placement": true,
+      "icon-anchor": "center"
+    },
+    "filter": ["all", ["==", "visible", true], ["==", "style", "kiivitaja"]]
+  },
+  {
+    "id": "orav",
+    "type": "symbol",
+    "layout": {
+      "icon-image": "img/orav.png",
+      "icon-size": {"stops": [[8, 0], [9, 0.25], [10, 0.5], [11, 0.75], [12, 1]]},
+      "icon-ignore-placement": true,
+      "icon-anchor": "bottom"
+    },
+    "filter": ["all", ["==", "visible", true], ["==", "style", "orav"]]
+  },
+  {
+    "id": "matkarada_vasakule",
+    "type": "symbol",
+    "layout": {
+      "icon-image": "img/matkarada_vasakule.svg",
+      "icon-size": {"stops": [[8, 0], [9, 0.25], [10, 0.5], [11, 0.75], [12, 1]]},
+      "icon-ignore-placement": true,
+      "icon-anchor": "bottom"
+    },
+    "filter": ["all", ["==", "visible", true], ["==", "style", "matkarada_vasakule"]]
+  },
+  {
+    "id": "matkarada_paremale",
+    "type": "symbol",
+    "layout": {
+      "icon-image": "img/matkarada_paremale.svg",
+      "icon-size": {"stops": [[8, 0], [9, 0.25], [10, 0.5], [11, 0.75], [12, 1]]},
+      "icon-ignore-placement": true,
+      "icon-anchor": "bottom"
+    },
+    "filter": ["all", ["==", "visible", true], ["==", "style", "matkarada_paremale"]]
+  },
+  {
+    "id": "kuused",
+    "type": "symbol",
+    "layout": {
+      "icon-image": "img/kuused.png",
+      "icon-size": {"stops": [[8, 0], [9, 0.25], [10, 0.5], [11, 0.75], [12, 1]]},
+      "icon-ignore-placement": true,
+      "icon-anchor": "center"
+    },
+    "filter": ["all", ["==", "visible", true], ["==", "style", "kuused"]]
+  },
+  {
+    "id": "lehtpuud",
+    "type": "symbol",
+    "layout": {
+      "icon-image": "img/lehtpuud.png",
+      "icon-size": {"stops": [[8, 0], [9, 0.25], [10, 0.5], [11, 0.75], [12, 1]]},
+      "icon-ignore-placement": true,
+      "icon-anchor": "bottom"
+    },
+    "filter": ["all", ["==", "visible", true], ["==", "style", "lehtpuud"]]
+  },
+  {
+    "id": "kurg",
+    "type": "symbol",
+    "layout": {
+      "icon-image": "img/kurg.png",
+      "icon-size": {"stops": [[8, 0], [9, 0.25], [10, 0.5], [11, 0.75], [12, 1]]},
+      "icon-ignore-placement": true,
+      "icon-anchor": "bottom"
+    },
+    "filter": ["all", ["==", "visible", true], ["==", "style", "kurg"]]
+  },
+  {
+    "id": "pardid",
+    "type": "symbol",
+    "layout": {
+      "icon-image": "img/pardid.png",
+      "icon-size": {"stops": [[8, 0], [9, 0.25], [10, 0.5], [11, 0.75], [12, 1]]},
+      "icon-ignore-placement": true,
+      "icon-anchor": "bottom"
+    },
+    "filter": ["all", ["==", "visible", true], ["==", "style", "pardid"]]
+  },
+  {
+    "id": "praam",
+    "type": "symbol",
+    "layout": {
+      "icon-image": "img/praam.png",
+      "icon-size": {"stops": [[8, 0], [9, 0.25], [10, 0.5], [11, 0.75], [12, 1]]},
+      "icon-ignore-placement": true,
+      "icon-anchor": "top-left"
+    },
+    "filter": ["all", ["==", "visible", true], ["==", "style", "praam"]]
+  },
+  {
+    "id": "kadakad",
+    "type": "symbol",
+    "layout": {
+      "icon-image": "img/kadakad.png",
+      "icon-size": {"stops": [[8, 0], [9, 0.25], [10, 0.5], [11, 0.75], [12, 1]]},
+      "icon-ignore-placement": true,
+      "icon-anchor": "center"
+    },
+    "filter": ["all", ["==", "visible", true], ["==", "style", "kadakad"]]
+  },
+  {
+    "id": "kadakad2",
+    "type": "symbol",
+    "layout": {
+      "icon-image": "img/kadakad2.png",
+      "icon-size": {"stops": [[8, 0], [9, 0.25], [10, 0.5], [11, 0.75], [12, 1]]},
+      "icon-ignore-placement": true,
+      "icon-anchor": "center"
+    },
+    "filter": ["all", ["==", "visible", true], ["==", "style", "kadakad2"]]
+  },
+  {
+    "id": "jalgrattur",
+    "type": "symbol",
+    "layout": {
+      "icon-image": "img/jalgrattur.png",
+      "icon-size": {"stops": [[8, 0], [9, 0.25], [10, 0.5], [11, 0.75], [12, 1]]},
+      "icon-ignore-placement": true,
+      "icon-anchor": "bottom"
+    },
+    "filter": ["all", ["==", "visible", true], ["==", "style", "jalgrattur"]]
+  },
+  {
+    "id": "ilus_vaade",
+    "type": "symbol",
+    "layout": {
+      "icon-image": "img/ilus_vaade.svg",
+      "icon-size": {"stops": [[8, 0], [9, 0.25], [10, 0.5], [11, 0.75], [12, 1]]},
+      "icon-ignore-placement": true,
+      "icon-rotation-alignment": "map",
+      "icon-anchor": "left",
+      "icon-rotate": ["get", "icon-rotate"]
+    },
+    "filter": ["all", ["==", "visible", true], ["==", "style", "ilus_vaade"]]
+  },
+  {
+    "id": "punane_punkt",
+    "type": "symbol",
+    "layout": {
+      "icon-image": "img/punane_punkt.svg",
+      "icon-size":  1,
+      "icon-anchor": "center",
+      "icon-ignore-placement": true,
+      "icon-rotation-alignment": "viewport",
+      "text-field": "{text-field}",
+      "text-justify": "center",
+      "text-anchor": "center",
+      "text-font": ["arialb"],
+      "text-size": 14,
+      "text-offset": [0, 0.1],
+      "text-keep-upright": true,
+      "text-ignore-placement": true,
+      "text-rotation-alignment": "viewport"
+    },
+    "paint": {
+      "text-color": "rgb(255, 255, 255)",
+      "text-opacity": {"stops": [[9, 0], [10, 1]]},
+      "icon-opacity": {"stops": [[9, 0], [10, 1]]}
+    },
+    "filter": ["all", ["==", "visible", true], ["==", "style", "punane_punkt"]]
+  },
+  {
+    "id": "sinine_punkt",
+    "type": "symbol",
+    "layout": {
+      "icon-image": "img/sinine_punkt.svg",
+      "icon-size":  1,
+      "icon-anchor": "center",
+      "icon-ignore-placement": true,
+      "icon-rotation-alignment": "viewport",
+      "text-field": "{text-field}",
+      "text-justify": "center",
+      "text-anchor": "center",
+      "text-font": ["arialb"],
+      "text-size": 14,
+      "text-offset": [0, 0.1],
+      "text-keep-upright": true,
+      "text-ignore-placement": true,
+      "text-rotation-alignment": "viewport"
+    },
+    "paint": {
+      "text-color": "rgb(255, 255, 255)",
+      "text-opacity": {"stops": [[9, 0], [10, 1]]},
+      "icon-opacity": {"stops": [[9, 0], [10, 1]]}
+    },
+    "filter": ["all", ["==", "visible", true], ["==", "style", "sinine_punkt"]]
+  },
+  {
+    "id": "muuseum",
+    "type": "symbol",
+    "layout": {
+      "icon-image": "img/muuseum.svg",
+      "icon-size": {"stops": [[10, 0], [11, 0.1], [20, 1]]},
+      "icon-ignore-placement": true,
+      "icon-anchor": "center"
+    },
+    "paint": {
+      "icon-opacity": {"stops": [[10, 0], [11, 1]]}
+    },
+    "filter": ["all", ["==", "visible", true], ["==", "style", "muuseum"]]
+  },
+  {
+    "id": "rattalaenutus",
+    "type": "symbol",
+    "layout": {
+      "icon-image": "img/rattalaenutus.svg",
+      "icon-size": {"stops": [[10, 0], [11, 0.1], [20, 1]]},
+      "icon-ignore-placement": true,
+      "icon-anchor": "center"
+    },
+    "paint": {
+      "icon-opacity": {"stops": [[10, 0], [11, 1]]}
+    },
+    "filter": ["all", ["==", "visible", true], ["==", "style", "rattalaenutus"]]
+  },
+  {
+    "id": "telkimiskoht",
+    "type": "symbol",
+    "layout": {
+      "icon-image": "img/telkimiskoht.svg",
+      "icon-size": {"stops": [[10, 0], [11, 0.1], [20, 1]]},
+      "icon-ignore-placement": true,
+      "icon-anchor": "center"
+    },
+    "paint": {
+      "icon-opacity": {"stops": [[10, 0], [11, 1]]}
+    },
+    "filter": ["all", ["==", "visible", true], ["==", "style", "telkimiskoht"]]
+  },
+  {
+    "id": "kirik",
+    "type": "symbol",
+    "layout": {
+      "icon-image": "img/kirik.svg",
+      "icon-size": {"stops": [[10, 0], [11, 0.1], [20, 1]]},
+      "icon-ignore-placement": true,
+      "icon-anchor": "center"
+    },
+    "paint": {
+      "icon-opacity": {"stops": [[10, 0], [11, 1]]}
+    },
+    "filter": ["all", ["==", "visible", true], ["==", "style", "kirik"]]
+  },
+  {
+    "id": "vaatetorn",
+    "type": "symbol",
+    "layout": {
+      "icon-image": "img/vaatetorn.svg",
+      "icon-size": {"stops": [[10, 0], [11, 0.1], [20, 0.5]]},
+      "icon-ignore-placement": true,
+      "icon-anchor": "bottom"
+    },
+    "paint": {
+      "icon-opacity": {"stops": [[10, 0], [11, 1]]}
+    },
+    "filter": ["all", ["==", "visible", true], ["==", "style", "vaatetorn"]]
+  },
+  {
+    "id": "tuletorn",
+    "type": "symbol",
+    "layout": {
+      "icon-image": "img/tuletorn.svg",
+      "icon-size": {"stops": [[10, 0], [11, 0.1], [20, 0.5]]},
+      "icon-ignore-placement": true,
+      "icon-anchor": "bottom"
+    },
+    "paint": {
+      "icon-opacity": {"stops": [[10, 0], [11, 1]]}
+    },
+    "filter": ["all", ["==", "visible", true], ["==", "style", "tuletorn"]]
+  },
+  {
+    "id": "monument",
+    "type": "symbol",
+    "layout": {
+      "icon-image": "img/monument.svg",
+      "icon-size": {"stops": [[10, 0], [11, 0.1], [20, 0.5]]},
+      "icon-ignore-placement": true,
+      "icon-anchor": "bottom"
+    },
+    "paint": {
+      "icon-opacity": {"stops": [[10, 0], [11, 1]]}
+    },
+    "filter": ["all", ["==", "visible", true], ["==", "style", "monument"]]
+  },
+  {
+    "id": "moisa_varemed",
+    "type": "symbol",
+    "layout": {
+      "icon-image": "img/moisa_varemed.svg",
+      "icon-size": {"stops": [[10, 0], [11, 0.1], [20, 0.5]]},
+      "icon-ignore-placement": true,
+      "icon-anchor": "bottom"
+    },
+    "paint": {
+      "icon-opacity": {"stops": [[10, 0], [11, 1]]}
+    },
+    "filter": ["all", ["==", "visible", true], ["==", "style", "moisa_varemed"]]
+  },
+  {
+    "id": "puisniit",
+    "type": "symbol",
+    "layout": {
+      "icon-image": "img/puisniit.svg",
+      "icon-size": {"stops": [[10, 0], [11, 0.1], [20, 0.5]]},
+      "icon-ignore-placement": true,
+      "icon-anchor": "bottom"
+    },
+    "paint": {
+      "icon-opacity": {"stops": [[10, 0], [11, 1]]}
+    },
+    "filter": ["all", ["==", "visible", true], ["==", "style", "puisniit"]]
+  },
+  {
+    "id": "tuulik",
+    "type": "symbol",
+    "layout": {
+      "icon-image": "img/tuulik.svg",
+      "icon-size": {"stops": [[10, 0], [11, 0.15], [20, 1]]},
+      "icon-ignore-placement": true,
+      "icon-anchor": "bottom"
+    },
+    "paint": {
+      "icon-opacity": {"stops": [[10, 0], [11, 1]]}
+    },
+    "filter": ["all", ["==", "visible", true], ["==", "style", "tuulik"]]
+  },
+  {
+    "id": "wifi",
+    "type": "symbol",
+    "layout": {
+      "icon-image": "img/wifi.svg",
+      "icon-size": {"stops": [[10, 0], [11, 0.15], [20, 1]]},
+      "icon-ignore-placement": true,
+      "icon-anchor": "center"
+    },
+    "paint": {
+      "icon-opacity": {"stops": [[10, 0], [11, 1]]}
+    },
+    "filter": ["all", ["==", "visible", true], ["==", "style", "wifi"]]
+  },
+  {
+    "id": "majutus",
+    "type": "symbol",
+    "layout": {
+      "icon-image": "img/majutus.svg",
+      "icon-size": {"stops": [[10, 0], [11, 0.15], [20, 1]]},
+      "icon-ignore-placement": true,
+      "icon-anchor": "center"
+    },
+    "paint": {
+      "icon-opacity": {"stops": [[10, 0], [11, 1]]}
+    },
+    "filter": ["all", ["==", "visible", true], ["==", "style", "majutus"]]
+  },
+  {
+    "id": "sadam",
+    "type": "symbol",
+    "layout": {
+      "icon-image": "img/sadam.svg",
+      "icon-size": {"stops": [[10, 0], [11, 0.1], [20, 1]]},
+      "icon-ignore-placement": true,
+      "icon-anchor": "center"
+    },
+    "paint": {
+      "icon-opacity": {"stops": [[10, 0], [11, 1]]}
+    },
+    "filter": ["all", ["==", "visible", true], ["==", "style", "sadam"]]
+  },
+  {
+    "id": "paadisadam",
+    "type": "symbol",
+    "layout": {
+      "icon-image": "img/paadisadam.svg",
+      "icon-size": {"stops": [[10, 0], [11, 0.1], [20, 1]]},
+      "icon-ignore-placement": true,
+      "icon-anchor": "center"
+    },
+    "paint": {
+      "icon-opacity": {"stops": [[10, 0], [11, 1]]}
+    },
+    "filter": ["all", ["==", "visible", true], ["==", "style", "paadisadam"]]
+  },
+  {
+    "id": "meremark",
+    "type": "symbol",
+    "layout": {
+      "icon-image": "img/meremark.svg",
+      "icon-size": {"stops": [[10, 0], [11, 0.1], [20, 1]]},
+      "icon-ignore-placement": true,
+      "icon-anchor": "bottom"
+    },
+    "paint": {
+      "icon-opacity": {"stops": [[10, 0], [11, 1]]}
+    },
+    "filter": ["all", ["==", "visible", true], ["==", "style", "meremark"]]
+  },
+  {
+    "id": "ujumiskoht",
+    "type": "symbol",
+    "layout": {
+      "icon-image": "img/ujumiskoht.svg",
+      "icon-size": {"stops": [[10, 0], [11, 0.2], [20, 1]]},
+      "icon-ignore-placement": true,
+      "icon-anchor": "bottom"
+    },
+    "paint": {
+      "icon-opacity": {"stops": [[10, 0], [11, 1]]}
+    },
+    "filter": ["all", ["==", "visible", true], ["==", "style", "ujumiskoht"]]
+  },
+  {
+    "id": "kohvik",
+    "type": "symbol",
+    "layout": {
+      "icon-image": "img/kohvik.svg",
+      "icon-size": {"stops": [[10, 0], [11, 0.2], [20, 1]]},
+      "icon-ignore-placement": true,
+      "icon-anchor": "center"
+    },
+    "paint": {
+      "icon-opacity": {"stops": [[10, 0], [11, 1]]}
+    },
+    "filter": ["all", ["==", "visible", true], ["==", "style", "kohvik"]]
+  },
+  {
+    "id": "piirivalveehitis",
+    "type": "symbol",
+    "layout": {
+      "icon-image": "img/piirivalveehitis.svg",
+      "icon-size": {"stops": [[10, 0], [11, 0.1], [20, 0.75]]},
+      "icon-ignore-placement": true,
+      "icon-anchor": "bottom"
+    },
+    "paint": {
+      "icon-opacity": {"stops": [[10, 0], [11, 1]]}
+    },
+    "filter": ["all", ["==", "visible", true], ["==", "style", "piirivalveehitis"]]
+  },
+  {
+    "id": "piirivalvetorn",
+    "type": "symbol",
+    "layout": {
+      "icon-image": "img/piirivalvetorn.svg",
+      "icon-size": {"stops": [[10, 0], [11, 0.25], [20, 1.5]]},
+      "icon-ignore-placement": true,
+      "icon-anchor": "bottom"
+    },
+    "paint": {
+      "icon-opacity": {"stops": [[10, 0], [11, 1]]}
+    },
+    "filter": ["all", ["==", "visible", true], ["==", "style", "piirivalvetorn"]]
+  },
+  {
+    "id": "part",
+    "type": "symbol",
+    "layout": {
+      "icon-image": "img/part.png",
+      "icon-size": {"stops": [[8, 0], [9, 0.25], [10, 0.5], [11, 0.75], [12, 1]]},
+      "icon-ignore-placement": true,
+      "icon-anchor": "center"
+    },
+    "paint": {
+    },
+    "filter": ["all", ["==", "visible", true], ["==", "style", "part"]]
+  },
+  {
+    "id": "part_ujub",
+    "type": "symbol",
+    "layout": {
+      "icon-image": "img/part_ujub.png",
+      "icon-size": {"stops": [[8, 0], [9, 0.25], [10, 0.5], [11, 0.75], [12, 1]]},
+      "icon-ignore-placement": true,
+      "icon-anchor": "center"
+    },
+    "paint": {
+    },
+    "filter": ["all", ["==", "visible", true], ["==", "style", "part_ujub"]]
+  },
+  {
+    "id": "part_vaike",
+    "type": "symbol",
+    "layout": {
+      "icon-image": "img/part_vaike.svg",
+      "icon-size": {"stops": [[10, 0], [11, 0.1], [20, 1]]},
+      "icon-ignore-placement": true,
+      "icon-anchor": "center"
+    },
+    "paint": {
+      "icon-opacity": {"stops": [[10, 0], [11, 1]]}
+    },
+    "filter": ["all", ["==", "visible", true], ["==", "style", "part_vaike"]]
+  },
+  {
+    "id": "TEST",
+    "type": "symbol",
+    "layout": {
+      "icon-image": "img/punane_punkt.svg",
+      "icon-size":  1,
+      "icon-anchor": "center",
+      "icon-ignore-placement": true,
+      "icon-rotation-alignment": "viewport",
+      "text-field": "{text-field}",
+      "text-justify": "center",
+      "text-anchor": "center",
+      "text-font": ["arialb"],
+      "text-size": 14,
+      "text-offset": [0, 0.1],
+      "text-keep-upright": true,
+      "text-ignore-placement": true,
+      "text-rotation-alignment": "viewport"
+    },
+    "paint": {
+      "text-color": "rgb(255, 255, 255)",
+      "text-opacity": {"stops": [[9, 0], [10, 1]]},
+      "icon-opacity": {"stops": [[9, 0], [10, 1]]}
+    },
+    "filter": ["all", ["==", "visible", true], ["==", "style", "TEST"]]
+  }
+]
