@@ -10,7 +10,7 @@ require.config({
     css:          "https://kaart.regio.ee/vendors/requirejs/2.3.6/css.min",
     text:         "https://kaart.regio.ee/vendors/requirejs/2.3.6/text.min",
     jquery:       "https://kaart.regio.ee/vendors/jquery/3.4.1/jquery.min",
-    mapboxgl:     "https://kaart.regio.ee/vendors/mapbox-gl-js/v1.1.0/mapbox-gl.min",
+    mapboxgl:     "https://kaart.regio.ee/vendors/mapbox-gl-js/v1.9.1/mapbox-gl.min",
     mapboxgldraw: "https://kaart.regio.ee/vendors/mapbox-gl-draw/v1.0.9/mapbox-gl-draw.min",
     turf:         "https://kaart.regio.ee/vendors/turf/v3.0.11/turf.min",
     config:       "./config",
@@ -28,7 +28,7 @@ require.config({
 require([
   "css!../css/app.css",
   "css!../css/resolutions.css",
-  "css!https://kaart.regio.ee/vendors/mapbox-gl-js/v1.1.0/mapbox-gl.css",
+  "css!https://kaart.regio.ee/vendors/mapbox-gl-js/v1.9.1/mapbox-gl.css",
   "css!https://kaart.regio.ee/vendors/fontawesome/v5.7.2/css/all.min.css"
 ], function () {
   "use strict";

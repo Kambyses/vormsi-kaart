@@ -19,7 +19,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <link rel="manifest" href="manifest.json?version=2019-07-03">
+    <link rel="manifest" href="manifest.json?version=2021-04-21-11-25">
     <style>
       html {
         width: 100%;
@@ -126,7 +126,7 @@
         "use strict";
         var regio = window.regio = window.regio || {}, script;
         regio.environment = window.location.hostname !== "kaart.regio.ee" ? "development" : "production";
-        regio.version = regio.environment === "production" ? "2019-07-11-08-59" : "";
+        regio.version = regio.environment === "production" ? "2021-04-21-11-25" : "";
         regio.versionArgs = regio.version ? "?version=" + regio.version : "";
         script = document.createElement("script");
         script.setAttribute("src", "https://kaart.regio.ee/vendors/requirejs/2.3.6/require.min.js");
